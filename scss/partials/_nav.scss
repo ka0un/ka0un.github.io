@@ -1,0 +1,95 @@
+.menu-button {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  background: transparent;
+  border: 0;
+  transition: transform ease-in-out 250ms;
+  cursor: pointer;
+  outline: none;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  z-index: 10;
+
+  transform: translateX(-100%);
+  transition: transform ease-out 250ms;
+}
+
+nav {
+  li, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: stretch;
+  background: $accent;
+}
+
+nav li {
+  text-align: center;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $dark-blue;    
+  }
+}
+
+nav li:hover {
+  background: rgba(black, .2);
+}
+
+nav a {
+  @include sans-serif($fs: 4rem, $color: $dark-blue);
+  text-decoration: none;
+}
+
+.close-icon {
+  display: none;
+}
+
+.nav-is-open {
+  height: 100vh;
+  overflow-y: hidden;
+
+  nav {
+    transform: translateX(0);
+  }
+
+  .container-all {
+    transform: translateX(80%);
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .close-icon {
+    display: block;
+  }
+
+  .menu-button {
+    transform: translateX(-70%);
+  }
+}
+
+.container-all {
+  transition: transform ease-out 250ms;
+}
+
