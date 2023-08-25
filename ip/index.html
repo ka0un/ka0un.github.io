@@ -1,0 +1,754 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>C Exam Practice</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="293b743a-6f86-4b9e-8fb1-e4f55a80c830" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">👨‍💻</span></div><h1 class="page-title">C Exam Practice</h1><p class="page-description"></p></header><div class="page-body"><p id="4eda56b3-d3ec-4e6f-84ad-0d9dc526b0c3" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="02783510-f889-43eb-a315-792476e82ae1"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><strong>Disclaimer:</strong><p id="32e8c02c-b92d-49f3-a05b-a16952b3abe6" class="">This document is authored by Kasun for the sole purpose of practicing for the upcoming Introduction to Programming exam. It is not officially endorsed or affiliated with any company. </p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="c901c08b-db57-46c9-878b-fe3fc8bcb3b2"><div style="font-size:1.5em"><span class="icon">ℹ️</span></div><div style="width:100%"><strong>Info:</strong>
+The solutions to these questions can be attained through an understanding of the material covered up to the lesson on control structures. every question takes estimated less than 20mins to complete
+</div></figure><hr id="5e3ce608-fb5b-415d-9713-573f419c08de"/><ol type="1" id="dbe0128f-9466-416b-9844-b64a80e18efc" class="numbered-list" start="1"><li><strong>Write down simple C program for print this text art, but there should be only 1 print function. </strong><mark class="highlight-teal"><strong>[EASY]</strong></mark></li></ol><pre id="cb078d46-4356-4886-a7d0-0de40f95ba91" class="code"><code>     .-&quot;&quot;&quot;&quot;&quot;&quot;-.
+   .&#x27;          &#x27;.
+  /   O      O   \
+ :                :
+ |                |   
+ : &#x27;,          ,&#x27; :
+  \  &#x27;-......-&#x27;  /
+   &#x27;.          .&#x27;
+     &#x27;-......-&#x27;</code></pre><p id="269b7ff1-ad18-4eec-91d9-4c0f16f1a0a7" class="">💡 <mark class="highlight-gray">HINT: you might have to use Escape Sequences</mark></p><p id="3fdfc005-30be-48c7-a8d1-16deba384aec" class="">
+</p><hr id="8f9119f4-5d7b-47e4-9ea0-33667a75df1c"/><p id="58d76bec-02bb-4620-9777-8f81b8bb0c4e" class=""><mark class="highlight-gray">
+</mark></p><ol type="1" id="18926007-a643-4052-bb0c-98cb05877c50" class="numbered-list" start="2"><li><strong>Write Simple C program for Calculate Person’s tax based on his salary. Use following information for the calculation </strong><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark></li></ol><p id="0dbbf9e8-290e-44b1-b11e-d924cc65ed57" class="">
+  Here are the personal income tax rates for Sri Lanka as of 2023/24:</p><ul id="0374456e-4c8e-4040-8cbe-64e08238321e" class="bulleted-list"><li style="list-style-type:disc">First 500,000 LKR: 6%</li></ul><ul id="83fed4b4-dd3d-4a9d-9721-e30a39ca2d9f" class="bulleted-list"><li style="list-style-type:disc">Next 500,000 LKR: 12%</li></ul><ul id="3ca706f1-17e5-482f-8b62-ab49e0f694dc" class="bulleted-list"><li style="list-style-type:disc">Next 500,000 LKR: 18%</li></ul><ul id="05752bf1-838c-4e8c-80a8-e4dcba02afb6" class="bulleted-list"><li style="list-style-type:disc">Next 500,000 LKR: 24%</li></ul><ul id="e53594be-d8f7-44aa-8959-d056cb6f2684" class="bulleted-list"><li style="list-style-type:disc">Next 500,000 LKR: 30%</li></ul><ul id="3c033947-19e6-44a8-b6d1-7e2335fd9e33" class="bulleted-list"><li style="list-style-type:disc">Over 2.5 million LKR: 36%</li></ul><p id="cd0bf060-d2d0-453d-84d1-99e6609d798d" class="">💡 <mark class="highlight-gray">HINT: person who earns 1.2Mil LKR is paying 126K for taxes</mark></p><p id="73c7ecb5-2bea-44cb-b87f-f89b815fc894" class="">
+</p><hr id="b96c4288-7090-47ef-be3b-6481b97c58cb"/><p id="57f0acb0-f618-492c-b3cf-35c976dcc191" class="">
+</p><ol type="1" id="3d89a04f-79cd-4fb8-a40d-b8fe7d29fd01" class="numbered-list" start="3"><li><strong>Write Simple C Program to get one Character input and if it is a Capital Letter Convert it to Simple 
+If it is a Simple letter convert into capital. finally print the output </strong><mark class="highlight-teal"><strong>[EASY]</strong></mark></li></ol><p id="e1fffd43-57fa-484c-be07-7f608ff2535d" class="">💡 <mark class="highlight-gray">HINT: try mathematical operators with char variables and ascii table</mark></p><p id="068f16cb-0f88-4a15-9cfd-8a4b8a2951e9" class="">
+</p><hr id="66920c4e-3345-444f-8876-5a21d6bf5d72"/><p id="ca1c492d-4387-42ac-b812-4383bd9f5105" class="">
+4. <strong>You have to write down C program to check safety protocols of a rocket. </strong><mark class="highlight-teal"><strong>[EASY]</strong></mark></p><p id="c5261945-58e6-4bee-a64d-e6919a197d85" class="">
+You have access to following variables of the rocket 
+
+1. hydrazine level (fuel -  liters)
+2. Oxidizers level (liters)
+3. Internal pressure (psi)
+4. External Pressure (psi)
+5. Temp (Celsius)
+</p><p id="096a7370-d57d-4c34-af8a-bf7bf3b170b3" class="">There are some conditions that can be lead to launch failure. if you detect 2 or more these conditions you have to abord the launch </p><p id="236e38cc-485c-41f0-b007-7bbca21ca3b5" class="">
+ 1.  Internal Pressure is Higher that External Pressure
+ 2. Temp is higher that 100C
+ 3. Oxidizer level is lower that 2L Or  hydrazine level is lower than 2L
+ 4. Temp is higher than 80C and Internal Pressure is Below 5PSI
+5. hydrazine higher than Oxidizers and External Pressure is Higher than Internal Pressure
+
+Finally You have to Print SUCCESS if Rocket is able to launch else ABORD 
+
+💡 <mark class="highlight-gray">HINT: break everything into smaller parts and solve one by one</mark></p><p id="1413e58f-3464-4247-a2ff-a5c0c36b650e" class="">
+</p><hr id="28f4fe87-6261-4220-91b6-806339d4d267"/><p id="e86f1ad6-85c7-47cc-a8f1-838079711d06" class=""><mark class="highlight-gray">
+5. </mark><mark class="highlight-default"><strong>Write a program that takes input as a number and printing it after reversing it </strong></mark><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark><mark class="highlight-default"><strong>
+
+</strong></mark>💡 <mark class="highlight-gray">HINT: you can use number % 10 to get its least significant digit</mark>
+</p><hr id="9750f6c7-656c-471c-99d8-c0c8c5f8a4e3"/><p id="a96065d9-d224-413d-a307-aae939294fd1" class="">
+6. <mark class="highlight-default"><strong>Write a C program that takes an integer input from the user and determines whether it&#x27;s a palindrome or not. A palindrome is a number that remains the same when its digits are reversed.</strong></mark><strong> </strong><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark>
+</p><p id="7b4040b3-d990-4ed2-97af-2a6aafe50e6a" class="">💡 <mark class="highlight-gray">HINT: you can use number % 10 to get its least significant digit</mark></p><p id="c80f054e-fbd9-4e49-a382-49432a6a98ab" class="">
+</p><hr id="f34fdbfe-c40d-42b5-a46a-b6c57dced452"/><p id="3924695b-9729-4926-8e14-20be9200fec8" class="">
+</p><ol type="1" id="a286b076-0574-451d-9797-753af9f49db1" class="numbered-list" start="7"><li><strong>Write a C program that takes an integer input N from the user and prints a pattern of numbers in the form of a triangle, as shown in the examples below. </strong><mark class="highlight-teal"><strong>[EASY]</strong></mark></li></ol><pre id="c9e8ea4a-8752-4d84-83f4-0714f386dc5b" class="code"><code>1
+22
+333
+4444
+...
+nnnn...n</code></pre><p id="cc2cf6cd-c04f-48bb-8d63-2f05d6556484" class="">💡 <mark class="highlight-gray">HINT: utilize nested for loop for that</mark></p><p id="e2ef80e5-6057-4980-bf90-f1507fa9c4de" class="">
+</p><hr id="cc554b42-3787-4b24-893d-af02d3aefd2c"/><p id="cb95efac-7bef-4808-b69f-ea453f5e9248" class="">
+8. <strong>Write a C program that takes an odd integer N as input from the user and prints a diamond pattern using asterisks (*) and spaces. The diamond should have a height of N rows. </strong><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark></p><pre id="5e8b3ce8-0f0d-4c0d-9646-6358e004c6e6" class="code"><code>  *
+ ***
+*****
+ ***
+  *</code></pre><p id="9927a057-1db9-492a-b287-f84097a90925" class="">💡 <mark class="highlight-gray">HINT: utilize nested for loop for that</mark></p><p id="12ed7247-d103-4a69-a1b0-6c3b8be80b72" class="">
+</p><hr id="3fbafc88-0369-4687-be1c-17adbccb67f6"/><p id="11157612-4f80-45c5-bb5b-92aacd049dee" class="">
+</p><ol type="1" id="988c67c9-0261-44dd-be57-459aefab00c9" class="numbered-list" start="9"><li><strong>Write a C program that takes an integer N as input from the user and prints the Fibonacci sequence up to the N-th term. However, in this version of the Fibonacci sequence, each term is the sum of the previous three terms. </strong><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark></li></ol><p id="f814094a-1a54-48c5-8bf6-61d4e6989607" class="">
+💡 <mark class="highlight-gray">HINT: 1 1 2 4 7 13 24 44 81 149</mark></p><p id="59ed13a5-e8f5-47e1-9cde-60411e6f85cd" class="">
+</p><hr id="21d2d9d9-86c7-4b93-8cdf-9c82b49243ba"/><p id="1b8ca0a3-c525-4780-90d6-ff05961d5ee9" class="">
+</p><ol type="1" id="815fcd20-944b-455e-ab99-3f0dc743b56e" class="numbered-list" start="10"><li><strong>Write a C program that takes a positive integer N as input from the user and prints a pyramid pattern using numbers. Each row of the pyramid should contain the numbers from 1 to N. </strong><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark></li></ol><pre id="7578f15a-5169-4cc8-b8ab-bb6287025c60" class="code"><code>    1
+   123
+  12345
+ 1234567
+123456789</code></pre><p id="e576c378-300f-459e-bf38-b27cfc9b6a8f" class="">💡 <mark class="highlight-gray">HINT: Nested Loops</mark></p><p id="fbfda2fa-c5f4-453f-9cf9-56d5a167eed4" class="">
+</p><hr id="c30c0738-fb87-46fa-9a7f-7ee6d6e97991"/><p id="20ac62fe-7086-4fbb-8768-f2d3fb95739a" class="">
+</p><ol type="1" id="a6d39da5-9d2a-47cd-8de1-d56e15b61fe9" class="numbered-list" start="11"><li><strong>Write a program that inputs 9 digits number and convert it to 3x3 matrix and you have to print that in following format </strong><mark class="highlight-yellow"><strong>[NORMAL]</strong></mark></li></ol><pre id="2e1e38ec-2faf-4c8d-849f-c277ab402efe" class="code"><code>1 2 3
+4 5 6
+7 8 9</code></pre><p id="2fec9a14-c73f-4e52-a25c-12429b6abccd" class="">and also find out if it is a magic square matrix, if yes print MAGIC
+
+<mark class="highlight-gray"> 💡 HINT: A magic square is a square matrix in which the sum of every row, column, and diagonal is the same. </mark></p><p id="8e1aed14-babb-449a-93b4-a0beebbcfded" class="">
+</p><hr id="51911dc8-4375-472c-892e-e6487c9e9dad"/><p id="4691eb2d-2a9c-47b4-a4e8-bd6f9dba4f0b" class=""><mark class="highlight-gray">
+
+</mark><strong><mark class="highlight-default">12. Write a C program that calculates and prints the sum of an exponential series up to a specified number of terms. </mark></strong><mark class="highlight-red"><strong>[Advanced]</strong></mark>
+
+<mark class="highlight-gray"> 💡 HINT: exponential series : 1 + x^1/1! + x^2/2! + x^3/3! + ... + x^n/n!</mark></p><p id="54eadbdd-e68b-43dd-86bd-80ff29e9a697" class="">
+</p><p id="ee15ff1c-2f99-427d-84e9-2df5fdc21291" class="">
+</p></div></article></body></html>
