@@ -1,78 +1,189 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Untitled Page</title>
-<meta name="generator" content="WYSIWYG Web Builder 17 - https://www.wysiwygwebbuilder.com">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="font-awesome.min.css" rel="stylesheet">
-<link href="Untitled1.css" rel="stylesheet">
-<link href="Portfolio.css" rel="stylesheet">
-<script src="jquery-3.6.0.min.js"></script>
-<link rel="stylesheet" href="magnificpopup/magnific-popup.css">
-<script src="magnificpopup/jquery.magnific-popup.min.js"></script>
-<script src="wwb17.min.js"></script>
-<script>
-function displaylightbox(url, options)
-{
-   options.items = { src: url };
-   options.type = 'iframe';
-   $.magnificPopup.open(options);
-}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Kasun Hapangama</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="Your website description">
+  <meta name="keywords" content="your, keywords, here">
+  <meta name="author" content="Your Name">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e; /* Dark background color */
+      color: #ffffff; /* Text color */
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      width: 80%; /* Adjust the width as needed */
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      width: 100%; /* Adjust the width as needed */
+      background: #282c34; /* Darker background for cards */
+      border-radius: 10px; /* Rounded corners for cards */
+      margin: 1%;
+      padding: 20px;
+    }
+
+    .category h2 {
+      margin-bottom: 10px;
+    }
+
+	.card {
+	  display: inline-block;
+	  width: calc(33.00% - 10px); /* 3 cards per row */
+	  height: 200px; /* Fixed height */
+	  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
+	  background-size: cover; /* Adjusted background size */
+	  background-repeat: no-repeat;
+	  background-position: center center;
+	  border-radius: 8px; /* Rounded corners for cards */
+	  margin-right: 10px; /* Margin between cards */
+	  margin-bottom: 10px; /* Margin between rows */
+	  position: relative;
+	  overflow: hidden;
+	}
+
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5); /* Slight black tint */
+      padding: 10px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .card-content h3, .card-content p {
+      color: #ffffff; /* Text color on the tint */
+      margin: 0;
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Increase size on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .back-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1; /* Ensure it's above the content */
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0); /* Darker background for footer */
+      padding: 1px;
+      text-align: center;
+      color: #fff; /* Text color in footer */
+    }
+
+    @media (max-width: 767px) {
+      .category-container {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .category {
+        width: 100%;
+        margin: 1% 0;
+      }
+
+      .card {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-<div id="wb_LayoutGrid1">
-<div id="LayoutGrid1">
-<div class="row">
-<div class="col-1">
-<div id="wb_Breadcrumb2" style="display:inline-block;width:100%;z-index:0;vertical-align:top;">
-<ul id="Breadcrumb2">
-<li><a href="./index.html" onclick="AnimateCss('', 'rainbow-background', 0, 500);return false;">KASUN HAPANGAMA</a></li>
-</ul>
-
-</div>
-</div>
-<div class="col-2">
-<div id="wb_Breadcrumb1" style="display:inline-block;width:100%;z-index:1;vertical-align:top;">
-<ul id="Breadcrumb1">
-<li class="active" aria-current="page"><i class="fa fa-arrow-right">&nbsp;</i>PORTFOLIO</li>
-<li><a href="javascript:displaylightbox('./resume.pdf',{})" target="_self"> RESUME</a></li>
-<li><a href="https://github.com/ka0un" target="_blank"> GITHUB</a></li>
-<li><a href="mailto:givemelognotes@gmail.com"> CONTACT</a></li>
-</ul>
-
-</div>
-</div>
-<div class="col-3">
-</div>
-</div>
-</div>
-</div>
-<div id="wb_galleryPhotoGrid">
-<div id="galleryPhotoGrid">
-<div class="row">
-<div class="col-1">
-<div id="wb_gallery" style="display:inline-block;width:100%;z-index:2;">
-<div id="gallery">
-   <div class="thumbnails">
-      <div class="thumbnail">
-         <a href="https://github.com/KASUNHapangama/DiscordLeaderboards" target="_blank"><img alt="Create Minecraft Leaderboards with PlaceholderAPI and Post it to Discord Via Webhooks or DiscordSRV" src="https://proxy.spigotmc.org/31673ca874287b16b396955ddabb7c794b2b338b?url=https%3A%2F%2Fcdn.discordapp.com%2Fattachments%2F1074520108514431026%2F1108474446987141261%2FGroup_9.png" class="image" title="DiscordLeaderboards"></a>
-<div class="caption">DiscordLeaderboards<div class="description">Create Minecraft Leaderboards with PlaceholderAPI and Post it to Discord Via Webhooks or DiscordSRV</div>
-</div>
+  <header>
+    <a href="https://ka0un.github.io"><button class="back-button">Back</button></a>
+    <h1>My Portfolio</h1>
+  </header>
+  
+  <div class="container">
+    <div class="category-container">
+      <div class="category">
+        <h2>Plugins</h2>
+        <a href="https://github.com/ka0un/DiscordLeaderboards" target="_blank" class="card" data-image="https://cdn.discordapp.com/attachments/1074520108514431026/1108474446987141261/Group_9.png">
+          <div class="card-content">
+            <h3>DiscordLeaderboards</h3>
+            <p>Minecraft Leaderboards on Discord</p>
+          </div>
+        </a>
+        <a href="https://github.com/ka0un/SimpleWebsite" target="_blank" class="card" data-image="https://user-images.githubusercontent.com/88395585/267270781-f737c253-d918-46cc-a34b-a4a9fdc625c0.png">
+          <div class="card-content">
+            <h3>SimpleWebsite</h3>
+            <p>Host Websites on Minecraft Servers</p>
+          </div>
+        </a>
+        <a href="https://github.com/ka0un/OPProtector" target="_blank" class="card" data-image="https://cdn.discordapp.com/attachments/1074520108514431026/1153252847232745492/image.png">
+          <div class="card-content">
+            <h3>OPProtector</h3>
+            <p>Protect Staff Accounts on Minecraft</p>
+          </div>
+        </a>		
+        <!-- Add more cards within this category -->
       </div>
-      <div class="thumbnail">
-         <a href="http://"><img alt="Im Currently Working on another spigot Plugin" src="https://images.unsplash.com/photo-1685509169424-c3ec59122617?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2ODk0MXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY4NzY3Mzc4N3w&ixlib=rb-4.0.3&q=80&w=1080" class="image" title="Comming Soon" width="450" height="253"></a>
-<div class="caption">Comming Soon<div class="description">Im Currently Working on another spigot Plugin</div>
-</div>
+
+      <div class="category">
+        <h2>Websites</h2>
+        <a href="https://github.com/ka0un/portfolio-template" target="_blank" class="card" data-image="https://user-images.githubusercontent.com/88395585/268585763-ca6126d4-2e69-40e4-9561-5a272d069d22.png">
+          <div class="card-content">
+            <h3>Portfolio-template</h3>
+            <p>Simple and Modern Portfolio template</p>
+          </div>
+        </a>
+        <!-- Add more cards within this category -->
       </div>
-      <div class="clearfix visible-col2"></div>
-   </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    </div>
+  </div>
+<script>
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    const imageUrl = card.getAttribute('data-image');
+    card.style.backgroundImage = `linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url('${imageUrl}')`;
+  });
+</script>
+
+  <footer>
+    <p>&copy; 2023 Sundevs. All rights reserved.</p>
+  </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
