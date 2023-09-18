@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="Your website description">
+  <meta name="keywords" content="your, keywords, here">
+  <meta name="author" content="Your Name">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e; /* Dark background color */
+      color: #ffffff; /* Text color */
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      width: 80%; /* Adjust the width as needed */
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .category-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      width: 100%; /* Adjust the width as needed */
+      background: #282c34; /* Darker background for cards */
+      border-radius: 10px; /* Rounded corners for cards */
+      margin: 1%;
+      padding: 20px;
+    }
+
+    .category h2 {
+      margin-bottom: 10px;
+    }
+
+    .card {
+      display: inline-block;
+      width: calc(33.333% - 10px); /* 3 cards per row */
+      height: 200px; /* Fixed height */
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5)), url('https://picsum.photos/800/600'); /* Card background with gradient */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 8px; /* Rounded corners for cards */
+      margin-right: 10px; /* Margin between cards */
+      margin-bottom: 10px; /* Margin between rows */
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5); /* Slight black tint */
+      padding: 10px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    .card-content h3, .card-content p {
+      color: #ffffff; /* Text color on the tint */
+      margin: 0;
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Increase size on hover */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .back-button {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1; /* Ensure it's above the content */
+    }
+
+    .back-button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0); /* Darker background for footer */
+      padding: 1px;
+      text-align: center;
+      color: #fff; /* Text color in footer */
+    }
+
+    @media (max-width: 767px) {
+      .category-container {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .category {
+        width: 100%;
+        margin: 1% 0;
+      }
+
+      .card {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><button class="back-button">Back</button></a>
+    <h1>My Portfolio</h1>
+  </header>
+  
+  <div class="container">
+    <div class="category-container">
+      <div class="category">
+        <h2>Category 1</h2>
+        <a href="resource1.html" target="_blank" class="card" data-image="https://picsum.photos/800/650">
+          <div class="card-content">
+            <h3>Resource 1</h3>
+            <p>Description of Resource 1</p>
+          </div>
+        </a>
+        <a href="resource2.html" target="_blank" class="card" data-image="https://picsum.photos/800/600">
+          <div class="card-content">
+            <h3>Resource 2</h3>
+            <p>Description of Resource 2</p>
+          </div>
+        </a>
+        <!-- Add more cards within this category -->
+      </div>
+
+      <div class="category">
+        <h2>Category 2</h2>
+        <a href="resource7.html" target="_blank" class="card" data-image="https://picsum.photos/801/600">
+          <div class="card-content">
+            <h3>Resource 7</h3>
+            <p>Description of Resource 7</p>
+          </div>
+        </a>
+        <!-- Add more cards within this category -->
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Your Name. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
