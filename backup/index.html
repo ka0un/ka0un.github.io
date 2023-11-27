@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kasun Hapangama</title>
+<meta name="description" content="Portfolio Of Kasun Hapangama">
+<meta name="keywords" content="Kasun, Hapangama">
+<meta name="author" content="Kasun Hapangama">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="image-removebg-preview.png" rel="icon" sizes="215x215" type="image/png">
+<link href="image-removebg-preview.png" rel="icon" sizes="215x215" type="image/png">
+<link href="image-removebg-preview.png" rel="icon" sizes="215x215" type="image/png">
+<link href="image-removebg-preview.png" rel="apple-touch-icon" sizes="215x215">
+<link href="Untitled1.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<link rel="stylesheet" href="magnificpopup/magnific-popup.css">
+<script src="magnificpopup/jquery.magnific-popup.min.js"></script>
+<script src="wwb17.min.js"></script>
+<script>
+function displaylightbox(url, options)
+{
+   options.items = { src: url };
+   options.type = 'iframe';
+   $.magnificPopup.open(options);
+}
+</script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#intro').offset().top }, 600, 'easeOutQuad');
+   });
+});
+</script>
+</head>
+<body>
+
+<div id="intro">
+<div id="intro-overlay"></div>
+<div id="intro_Container">
+<div id="wb_Image1">
+<img src="https://readme-typing-svg.demolab.com?font=Quicksand&size=40&duration=3000&pause=3000&color=E3E3E3&center=true&vCenter=true&width=435&lines=%F0%9F%8E%93+IT+Undergraduate;%E2%98%95+Java+Developer;%F0%9F%93%96+Lifetime+learner+" id="Image1" alt=""></div>
+</div>
+</div>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_Breadcrumb2">
+<ul id="Breadcrumb2">
+<li class="active" aria-current="page">KASUN HAPANGAMA</li>
+</ul>
+
+</div>
+</div>
+<div class="col-2">
+<div id="wb_Breadcrumb1">
+<ul id="Breadcrumb1">
+<li><a href="./Portfolio.html"> PORTFOLIO</a></li>
+<li><a href="javascript:displaylightbox('./resume.pdf',{})" target="_self"> RESUME</a></li>
+<li><a href="https://github.com/ka0un" target="_blank"> GITHUB</a></li>
+<li><a href="mailto:givemelognotes@gmail.com"> CONTACT</a></li>
+</ul>
+
+</div>
+</div>
+<div class="col-3">
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
