@@ -2588,3 +2588,168 @@ p {
 	background-color: var(--primary);
 	color: var(--white);
 }
+
+.certifications-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.certifications-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-main {
+  margin-top: 24px;
+}
+
+.certification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  margin-bottom: 16px;
+}
+
+.certification-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certification-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.certification-name .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+}
+
+.certification-name .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.certification-name .text .title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1F2C;
+  margin-bottom: 4px;
+}
+
+.certification-name .text .year {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.certification-item .project-btn {
+  display: flex;
+  align-items: center;
+  color: #1A1F2C;
+}
+
+.certification-item .project-btn:hover {
+  transform: translateX(5px);
+}
+
+.certification-item .project-btn .arrow-up {
+  transition: all 0.3s ease;
+}
+
+.certification-item .project-btn:hover .arrow-up {
+  transform: translateX(5px);
+}
+
+.certification-item a {
+  text-decoration: none;
+  color: #1A1F2C;
+}
+
+.certification-item .project-btn svg path {
+  stroke: #1A1F2C;
+}
+
+.image-carousel {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 8px;
+}
+
+/* Specific image positioning classes */
+.carousel-slide img.top {
+  object-position: center top;
+}
+
+.carousel-slide img.bottom {
+  object-position: center bottom;
+}
+
+.carousel-slide img.left {
+  object-position: left center;
+}
+
+.carousel-slide img.right {
+  object-position: right center;
+}
+
+.carousel-slide img.top-left {
+  object-position: left top;
+}
+
+.carousel-slide img.top-right {
+  object-position: right top;
+}
+
+.carousel-slide img.bottom-left {
+  object-position: left bottom;
+}
+
+.carousel-slide img.bottom-right {
+  object-position: right bottom;
+}
