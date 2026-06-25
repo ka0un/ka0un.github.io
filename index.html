@@ -697,6 +697,7 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width:720px){
   .hnav{ display:none; }
   .hero__img img{ object-position:50% 22%; }
+  .scrollcue{ display:none; }
 }
 /* hide the scroll cue on short viewports so it never overlaps the CTA */
 @media (max-height:680px){ .scrollcue{ display:none; } }
@@ -759,7 +760,7 @@ section{ position:relative; }
 
 /* about tile */
 .about-lead{ font-family:var(--serif); font-weight:330; font-size:1.5rem; font-size:clamp(1.3rem,2.6vw,1.85rem); line-height:1.32; letter-spacing:-.01em; }
-.about-lead b{ color:var(--accent); font-weight:330; }
+.about-lead b{ color:#bf431a; font-weight:330; }
 
 /* photo tile caption overlay */
 .tile--photo{ min-height:240px; }
@@ -862,7 +863,7 @@ details.more .bento{ margin-top:4px; }
    ===================================================================== */
 .skill-grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:16px; }
 .skill-card{ grid-column:span 4; background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:24px; }
-.skill-card h4{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 14px; }
+.skill-card h3{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 14px; }
 .chips{ display:flex; flex-wrap:wrap; gap:8px; }
 .chip{ display:inline-flex; align-items:center; gap:8px; font-size:.86rem; padding:6px 12px 6px 8px; border:1px solid var(--line); border-radius:100px; background:var(--paper); }
 .chip img{ width:20px; height:20px; object-fit:contain; }
@@ -877,7 +878,7 @@ details.more .bento{ margin-top:4px; }
 .prodcard__img img{ width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
 .prodcard:hover .prodcard__img img{ transform:scale(1.04); }
 .prodcard__body{ padding:22px 24px; }
-.prodcard__body h4{ font-family:var(--serif); font-weight:400; font-size:1.25rem; margin:0; }
+.prodcard__body h3{ font-family:var(--serif); font-weight:400; font-size:1.25rem; margin:0; }
 .prodcard__body .k{ font-family:var(--mono); font-size:.72rem; color:var(--accent); letter-spacing:.1em; text-transform:uppercase; }
 .prodcard__body p{ color:var(--muted); font-size:.92rem; margin:.5em 0 .8em; }
 @media (max-width:760px){ .prodcard{ grid-column:span 12; } }
@@ -1374,19 +1375,19 @@ addEventListener('DOMContentLoaded',function(){
     <div class="bento">
       <a class="prodcard r" href="https://store.sundevs.net/l/sunlicense" target="_blank" rel="noopener">
         <div class="prodcard__img"><img width="1900" height="960" src="assets/images/sundevs/SunLicense%20Cover.webp" alt="SunLicense" loading="lazy"></div>
-        <div class="prodcard__body"><span class="k">License Management</span><h4>SunLicense</h4><p>Create, validate, and control software license keys, with a Java API, Discord bot, and docs.</p></div>
+        <div class="prodcard__body"><span class="k">License Management</span><h3>SunLicense</h3><p>Create, validate, and control software license keys, with a Java API, Discord bot, and docs.</p></div>
       </a>
       <a class="prodcard r d-1" href="https://store.sundevs.net/l/sunguard" target="_blank" rel="noopener">
         <div class="prodcard__img"><picture><source type="image/avif" srcset="assets/images/sundevs/SunGuard%20Cover-760.avif 760w, assets/images/sundevs/SunGuard%20Cover-1140.avif 1140w" sizes="(max-width:760px) 92vw, 560px"><source type="image/webp" srcset="assets/images/sundevs/SunGuard%20Cover-760.webp 760w, assets/images/sundevs/SunGuard%20Cover-1140.webp 1140w" sizes="(max-width:760px) 92vw, 560px"><img width="1900" height="960" src="assets/images/sundevs/SunGuard%20Cover.png" alt="SunGuard" loading="lazy"></picture></div>
-        <div class="prodcard__body"><span class="k">Code Obfuscation</span><h4>SunGuard</h4><p>Wraps ProGuard &amp; yGuard to make Java code unreadable, from one simple dashboard.</p></div>
+        <div class="prodcard__body"><span class="k">Code Obfuscation</span><h3>SunGuard</h3><p>Wraps ProGuard &amp; yGuard to make Java code unreadable, from one simple dashboard.</p></div>
       </a>
       <a class="prodcard r" href="https://store.sundevs.net/l/sunpaste" target="_blank" rel="noopener">
         <div class="prodcard__img"><picture><source type="image/avif" srcset="assets/images/sundevs/SunPaste%20Cover-760.avif 760w, assets/images/sundevs/SunPaste%20Cover-1140.avif 1140w" sizes="(max-width:760px) 92vw, 560px"><source type="image/webp" srcset="assets/images/sundevs/SunPaste%20Cover-760.webp 760w, assets/images/sundevs/SunPaste%20Cover-1140.webp 1140w" sizes="(max-width:760px) 92vw, 560px"><img width="1900" height="960" src="assets/images/sundevs/SunPaste%20Cover.png" alt="SunPaste" loading="lazy"></picture></div>
-        <div class="prodcard__body"><span class="k">Text Sharing</span><h4>SunPaste</h4><p>Self-hosted paste sharing with access controls, a REST API, and an admin panel.</p></div>
+        <div class="prodcard__body"><span class="k">Text Sharing</span><h3>SunPaste</h3><p>Self-hosted paste sharing with access controls, a REST API, and an admin panel.</p></div>
       </a>
       <a class="prodcard r d-1" href="https://store.sundevs.net/l/sunlinks" target="_blank" rel="noopener">
         <div class="prodcard__img"><picture><source type="image/avif" srcset="assets/images/sundevs/SunLinks%20Cover-760.avif 760w, assets/images/sundevs/SunLinks%20Cover-1140.avif 1140w" sizes="(max-width:760px) 92vw, 560px"><source type="image/webp" srcset="assets/images/sundevs/SunLinks%20Cover-760.webp 760w, assets/images/sundevs/SunLinks%20Cover-1140.webp 1140w" sizes="(max-width:760px) 92vw, 560px"><img width="1900" height="960" src="assets/images/sundevs/SunLinks%20Cover.png" alt="SunLinks" loading="lazy"></picture></div>
-        <div class="prodcard__body"><span class="k">Link Shortener</span><h4>SunLinks</h4><p>Self-hostable URL shortener with your own domain, click tracking, and analytics.</p></div>
+        <div class="prodcard__body"><span class="k">Link Shortener</span><h3>SunLinks</h3><p>Self-hostable URL shortener with your own domain, click tracking, and analytics.</p></div>
       </a>
     </div>
   </div>
@@ -1401,7 +1402,7 @@ addEventListener('DOMContentLoaded',function(){
     </div>
     <div class="skill-grid">
       <div class="skill-card r">
-        <h4>Languages</h4>
+        <h3>Languages</h3>
         <div class="chips">
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/icons8-java.png" alt="">Java</span>
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/cs.png" alt="">C#</span>
@@ -1410,7 +1411,7 @@ addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="skill-card r d-1">
-        <h4>Backend &amp; Frameworks</h4>
+        <h3>Backend &amp; Frameworks</h3>
         <div class="chips">
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/icons8-spring-boot.png" alt="">Spring Boot</span>
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/net.png" alt="">ASP.NET</span>
@@ -1420,7 +1421,7 @@ addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="skill-card r d-2">
-        <h4>Databases</h4>
+        <h3>Databases</h3>
         <div class="chips">
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/icons8-mysql.png" alt="">MySQL</span>
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/icons8-mongodb.png" alt="">MongoDB</span>
@@ -1429,7 +1430,7 @@ addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="skill-card r d-1">
-        <h4>Cloud &amp; DevOps</h4>
+        <h3>Cloud &amp; DevOps</h3>
         <div class="chips">
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/aws.png" alt="">AWS</span>
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/oracle.png" alt="">Oracle Cloud</span>
@@ -1440,7 +1441,7 @@ addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="skill-card r d-2">
-        <h4>AI &amp; Automation</h4>
+        <h3>AI &amp; Automation</h3>
         <div class="chips">
           <span class="chip"><img loading="lazy" decoding="async" width="24" height="24" src="https://cdn.simpleicons.org/anthropic/CC785C" alt="">Claude AI</span>
           <span class="chip"><img loading="lazy" decoding="async" width="24" height="24" src="https://cdn.simpleicons.org/googlegemini/886FBF" alt="">Gemini</span>
@@ -1449,7 +1450,7 @@ addEventListener('DOMContentLoaded',function(){
         </div>
       </div>
       <div class="skill-card r d-3">
-        <h4>Tools &amp; Platforms</h4>
+        <h3>Tools &amp; Platforms</h3>
         <div class="chips">
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/icons8-git.png" alt="">Git</span>
           <span class="chip"><img loading="lazy" decoding="async" width="128" height="128" src="assets/images/icons/icons8-github.png" alt="">GitHub</span>
