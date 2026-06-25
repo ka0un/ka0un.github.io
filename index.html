@@ -1679,17 +1679,32 @@ addEventListener('keydown',function(e){if(e.key==='Escape'){lbClose();projClose(
 
 /* ---- Idle background preloader ----
    Fires only after window.load + idle — zero impact on LCP/FCP.
-   Collects every full-size URL passed to lbOpen() from the DOM,
-   then downloads them one-at-a-time in idle slots so the browser
-   never competes with user interactions or in-progress loads.
+   Priority 1: full-size lightbox images (lbOpen targets).
+   Priority 2: all lazy <picture> AVIF sources + lazy <img> srcs,
+               so they're cached before the user scrolls to them.
    Also prefetches the PDF as a backstop for users who never hover. */
 (function(){
   function ric(fn,t){'requestIdleCallback'in window?requestIdleCallback(fn,{timeout:t||2000}):setTimeout(fn,t||200);}
 
+  /* first URL from a srcset string */
+  function firstSrc(s){if(!s)return'';var p=s.trim().split(/\s*,\s*/);return p[0]?p[0].trim().split(/\s+/)[0]:'';}
+
+  /* full-size images opened by lbOpen() */
   function lbUrls(){
     var urls=[],seen={},re=/lbOpen\(['"]([^'"]+)['"]\)/;
     var els=document.querySelectorAll('[onclick]');
     for(var i=0;i<els.length;i++){var m=els[i].getAttribute('onclick').match(re);if(m&&!seen[m[1]]){seen[m[1]]=1;urls.push(m[1]);}}
+    return urls;
+  }
+
+  /* lazy display images: AVIF sources + lazy img fallbacks */
+  function lazyUrls(){
+    var urls=[],seen={};
+    function add(u){if(u&&!seen[u]){seen[u]=1;urls.push(u);}}
+    var srcs=document.querySelectorAll('source[type="image/avif"]');
+    for(var i=0;i<srcs.length;i++){add(firstSrc(srcs[i].getAttribute('srcset')));}
+    var imgs=document.querySelectorAll('img[loading="lazy"]');
+    for(var i=0;i<imgs.length;i++){add(imgs[i].getAttribute('src'));}
     return urls;
   }
 
@@ -1704,7 +1719,10 @@ addEventListener('keydown',function(e){if(e.key==='Escape'){lbClose();projClose(
     ric(function(){
       var cn=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
       if(cn&&(cn.saveData||cn.effectiveType==='2g'))return;
-      loadNext(lbUrls(),0);
+      /* lightbox images first (interactive), then display thumbnails */
+      var lb=lbUrls(),lazy=lazyUrls();
+      var queue=lb.concat(lazy.filter(function(u){return lb.indexOf(u)<0;}));
+      loadNext(queue,0);
       ric(function(){if(!document.querySelector('link[href$="kasun-hapangama.pdf"]')){var l=document.createElement('link');l.rel='prefetch';l.as='document';l.href='https://kasun.hapangama.com/kasun-hapangama.pdf';document.head.appendChild(l);}},5000);
     },1500);
   });
