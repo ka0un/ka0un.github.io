@@ -1676,6 +1676,39 @@ _each(document.querySelectorAll('.shot[onclick]'),function(f){
 });
 
 addEventListener('keydown',function(e){if(e.key==='Escape'){lbClose();projClose();}});
+
+/* ---- Idle background preloader ----
+   Fires only after window.load + idle — zero impact on LCP/FCP.
+   Collects every full-size URL passed to lbOpen() from the DOM,
+   then downloads them one-at-a-time in idle slots so the browser
+   never competes with user interactions or in-progress loads.
+   Also prefetches the PDF as a backstop for users who never hover. */
+(function(){
+  function ric(fn,t){'requestIdleCallback'in window?requestIdleCallback(fn,{timeout:t||2000}):setTimeout(fn,t||200);}
+
+  function lbUrls(){
+    var urls=[],seen={},re=/lbOpen\(['"]([^'"]+)['"]\)/;
+    var els=document.querySelectorAll('[onclick]');
+    for(var i=0;i<els.length;i++){var m=els[i].getAttribute('onclick').match(re);if(m&&!seen[m[1]]){seen[m[1]]=1;urls.push(m[1]);}}
+    return urls;
+  }
+
+  function loadNext(q,i){
+    if(i>=q.length)return;
+    var img=new Image();
+    img.onload=img.onerror=function(){ric(function(){loadNext(q,i+1);},1500);};
+    img.src=q[i];
+  }
+
+  window.addEventListener('load',function(){
+    ric(function(){
+      var cn=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
+      if(cn&&(cn.saveData||cn.effectiveType==='2g'))return;
+      loadNext(lbUrls(),0);
+      ric(function(){if(!document.querySelector('link[href$="kasun-hapangama.pdf"]')){var l=document.createElement('link');l.rel='prefetch';l.as='document';l.href='https://kasun.hapangama.com/kasun-hapangama.pdf';document.head.appendChild(l);}},5000);
+    },1500);
+  });
+})();
 </script>
 
 </body>
