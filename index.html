@@ -1678,51 +1678,54 @@ _each(document.querySelectorAll('.shot[onclick]'),function(f){
 addEventListener('keydown',function(e){if(e.key==='Escape'){lbClose();projClose();}});
 
 /* ---- Idle background preloader ----
-   Fires only after window.load + idle — zero impact on LCP/FCP.
-   Priority 1: full-size lightbox images (lbOpen targets).
-   Priority 2: all lazy <picture> AVIF sources + lazy <img> srcs,
-               so they're cached before the user scrolls to them.
-   Also prefetches the PDF as a backstop for users who never hover. */
+   Starts after window.load + first idle tick — zero LCP/FCP impact.
+   Fires 6 images in parallel per batch, scheduling each batch via
+   requestIdleCallback so it yields to user interactions between rounds.
+   Covers every srcset variant so the right size is always in cache.
+   Priority 1 → lightbox full images  Priority 2 → AVIF/lazy thumbnails */
 (function(){
-  function ric(fn,t){'requestIdleCallback'in window?requestIdleCallback(fn,{timeout:t||2000}):setTimeout(fn,t||200);}
+  function ric(fn,t){'requestIdleCallback'in window?requestIdleCallback(fn,{timeout:t||2000}):setTimeout(fn,t||150);}
 
-  /* first URL from a srcset string */
-  function firstSrc(s){if(!s)return'';var p=s.trim().split(/\s*,\s*/);return p[0]?p[0].trim().split(/\s+/)[0]:'';}
+  /* all URLs from a srcset string (every size variant) */
+  function parseSrcset(s){
+    if(!s)return[];
+    return s.split(',').map(function(e){return e.trim().split(/\s+/)[0];}).filter(Boolean);
+  }
 
-  /* full-size images opened by lbOpen() */
+  /* full-size images shown in the lightbox */
   function lbUrls(){
-    var urls=[],seen={},re=/lbOpen\(['"]([^'"]+)['"]\)/;
-    var els=document.querySelectorAll('[onclick]');
-    for(var i=0;i<els.length;i++){var m=els[i].getAttribute('onclick').match(re);if(m&&!seen[m[1]]){seen[m[1]]=1;urls.push(m[1]);}}
-    return urls;
+    var u=[],s={},re=/lbOpen\(['"]([^'"]+)['"]\)/,els=document.querySelectorAll('[onclick]');
+    for(var i=0;i<els.length;i++){var m=els[i].getAttribute('onclick').match(re);if(m&&!s[m[1]]){s[m[1]]=1;u.push(m[1]);}}
+    return u;
   }
 
-  /* lazy display images: AVIF sources + lazy img fallbacks */
+  /* every AVIF srcset variant + lazy img src fallbacks */
   function lazyUrls(){
-    var urls=[],seen={};
-    function add(u){if(u&&!seen[u]){seen[u]=1;urls.push(u);}}
-    var srcs=document.querySelectorAll('source[type="image/avif"]');
-    for(var i=0;i<srcs.length;i++){add(firstSrc(srcs[i].getAttribute('srcset')));}
+    var u=[],s={};
+    function a(x){if(x&&!s[x]){s[x]=1;u.push(x);}}
+    var avif=document.querySelectorAll('source[type="image/avif"]');
+    for(var i=0;i<avif.length;i++){var vs=parseSrcset(avif[i].getAttribute('srcset'));for(var j=0;j<vs.length;j++)a(vs[j]);}
     var imgs=document.querySelectorAll('img[loading="lazy"]');
-    for(var i=0;i<imgs.length;i++){add(imgs[i].getAttribute('src'));}
-    return urls;
+    for(var i=0;i<imgs.length;i++)a(imgs[i].getAttribute('src'));
+    return u;
   }
 
-  function loadNext(q,i){
-    if(i>=q.length)return;
-    var img=new Image();
-    img.onload=img.onerror=function(){ric(function(){loadNext(q,i+1);},1500);};
-    img.src=q[i];
+  /* fire CONCURRENT fetches at once, schedule next batch via idle */
+  var CONCURRENT=6;
+  function drain(q){
+    if(!q.length)return;
+    var b=q.splice(0,CONCURRENT);
+    for(var i=0;i<b.length;i++){var im=new Image();im.src=b[i];}
+    if(q.length)ric(function(){drain(q);},300);
   }
 
   window.addEventListener('load',function(){
     ric(function(){
       var cn=navigator.connection||navigator.mozConnection||navigator.webkitConnection;
       if(cn&&(cn.saveData||cn.effectiveType==='2g'))return;
-      /* lightbox images first (interactive), then display thumbnails */
-      var lb=lbUrls(),lazy=lazyUrls();
-      var queue=lb.concat(lazy.filter(function(u){return lb.indexOf(u)<0;}));
-      loadNext(queue,0);
+      var lb=lbUrls(),lazy=lazyUrls(),s={};
+      for(var i=0;i<lb.length;i++)s[lb[i]]=1;
+      drain(lb.concat(lazy.filter(function(u){return!s[u];})));
       ric(function(){if(!document.querySelector('link[href$="kasun-hapangama.pdf"]')){var l=document.createElement('link');l.rel='prefetch';l.as='document';l.href='https://kasun.hapangama.com/kasun-hapangama.pdf';document.head.appendChild(l);}},5000);
     },1500);
   });
