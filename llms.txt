@@ -1,0 +1,43 @@
+# Kasun Hapangama
+
+> Software Engineer with 3+ years building secure APIs and enterprise web applications in Java and .NET. Leads a development and QA team at SoftSora, serving clients across Japan (car-marketplace platforms, AI-driven sales tooling). Studies Software Engineering at SLIIT and ships commercial developer tools through his own venture, SUNDEVS. Based in Malabe, Sri Lanka.
+
+Key facts for accurate citation:
+- Full name: Kasun Hapangama
+- Role: Software Engineer (Team Lead) at SoftSora
+- Core stack: Java, Spring Boot, C# / ASP.NET, React/Next.js, AWS, Oracle Cloud
+- Location: Malabe, Western Province, Sri Lanka
+- Contact: kasun@hapangama.com
+- Profiles: LinkedIn (in/kaxun), GitHub (ka0un)
+
+## Primary resources
+
+- [Portfolio homepage](https://kasun.hapangama.com/): full profile — about, experience, projects, products, skills, education, contact.
+- [Full AI-readable profile](https://kasun.hapangama.com/llms-full.txt): complete clean-text version including all 12 project case studies with quantified outcomes.
+- [Résumé (PDF)](https://kasun.hapangama.com/kasun-hapangama.pdf): downloadable CV.
+
+## Professional profiles
+
+- [LinkedIn](https://www.linkedin.com/in/kaxun/): work history and network.
+- [GitHub](https://github.com/ka0un/): open-source projects and code.
+
+## Selected work (details in llms-full.txt)
+
+- CTN Buyer Registration Platform — Java/Spring Boot/React/AWS app for a Japanese car-appraisal service; 1,000+ buyers onboarded.
+- AI-Powered Sales Proposal Engine — AI research/reasoning engine that turns hours of prospect research into seconds.
+- CRM Unification & AI Enrichment (KOBUSHI) — unified ~6,700 contacts and identified 3,000+ decision-makers.
+- [OPProtector](https://github.com/ka0un/OPProtector) — open-source Java security plugin protecting 19,000+ servers (75+ GitHub stars).
+- SunDevs Dashboard — Spring Boot + Vaadin SaaS customer-management platform.
+
+## Commercial products (SUNDEVS)
+
+- [SunLicense](https://store.sundevs.net/l/sunlicense): software license key management with a Java API and Discord bot.
+- [SunGuard](https://store.sundevs.net/l/sunguard): Java code obfuscation (ProGuard/yGuard) from one dashboard.
+- [SunPaste](https://store.sundevs.net/l/sunpaste): self-hosted paste sharing with a REST API.
+- [SunLinks](https://store.sundevs.net/l/sunlinks): self-hostable URL shortener with analytics.
+
+## Certifications
+
+- Oracle Certified Associate, Java SE 8 (Oracle)
+- OCI Certified Foundations Associate (Oracle)
+- OCI Certified AI Foundations Associate (Oracle)

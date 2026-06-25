@@ -1,0 +1,736 @@
+# CTN Buyer Registration Project - 2024 Jun (CTN)
+
+CTN (ctn-net.jp) is a Japanese company called 株式会社CTN (CTN Co., Ltd.), based in Osaka, Japan. The company primarily operates in the automotive industry and provides services for car dealerships, vehicle sourcing, vehicle sales support, car valuation platforms, and digital marketing.
+CTN車一括査定 (CTN Car Bulk Appraisal), a service that connects car sellers with vehicle buyers across Japan.
+
+Previosuly all tasks related to buyer registration done by manually with excel sheets and email communication. The CTN Buyer Registration Project was initiated to automate and streamline the buyer registration process, making it more efficient and user-friendly for both buyers and CTN staff.
+
+The CTN Buyer Registration Project is a web-based application designed to facilitate the registration process for buyers interested in purchasing vehicles through the CTN Car Bulk Appraisal service. The project aims to create a user-friendly interface that allows buyers to easily sign up, provide necessary information, and access the services offered by CTN.
+
+
+
+Key Features:
+1. User Registration: Buyers can create an account by providing their personal information, contact details,
+2. Car Matching Condition Registration - Buyers can specify their preferences for the type of vehicles they are interested in purchasing, such as make, model, year, and price range. and other parameters
+3. Dashboard: Once registered, buyers can access a personalized dashboard where they can view their registered preferences, track their interactions with sellers, and manage their account settings.
+4. Notifications: The system can send notifications to buyers about new vehicle listings that match their registered
+
+There are aorund 1000 buyers registered on the platform, and the project is ongoing with continuous improvements and updates to enhance the user experience and expand the services offered by CTN.
+
+We have utilized java springboot backend with react frontned aws ec2 rds for postguresql database and cloudfornt for cdn. also use aws sns for notifications and ses for notifications
+
+Associated with SoftSora
+
+
+--------------
+
+# CTN Vehicle Data Project - 2024 Oct (CTN)
+
+The existing system that used by ctn is based on static json files embeded directly in their frontend make it diffuclt to add new vehicle data to the system
+
+we have introduced a new dynamic vehicle data model that untilized json files on s3 and cloudfront and seperate microservice running on ec2 for manupilate vehicle data
+
+Key Features:
+1. Dynamic Vehicle Data: The new system allows for dynamic management of vehicle data, enabling CTN staff to easily add, update, and remove vehicle information without the need for manual updates.
+2. S3 and CloudFront Integration: Vehicle data is stored in Amazon S3, and CloudFront is used to deliver the data efficiently to users across Japan, ensuring fast load times and a seamless user experience.
+3. Microservice Architecture: A separate microservice running on AWS EC2 is responsible for handling
+4. Faster data publishment and reflection
+
+
+As a results we were able to reduce the time taken to publish new vehicle data from 1-2 days to just a few hours, and the system is now more scalable and easier to maintain. The project is ongoing with continuous improvements and updates to enhance the user experience and expand the services offered by CTN.
+
+While mintaing the static and fast preloading nature of the system so users can acces data within 1ms (after the initl load time) making it comparitivly faster than api based systems|
+
+Associcated with SoftSora
+
+--------------------
+
+# Automated Business Analysis & Sales Research Pipeline 2025 Feb (INSP)
+
+This is for a sales team.
+
+What it does: Turns a single click into a complete research pack for every sales meeting — automatically.
+
+
+The Problem
+
+Before a sales meeting, reps need to understand who they're talking to: the company, its online presence, how it shows up on Google Maps, and any useful background. Doing this by hand for every prospect is slow, inconsistent, and easy to skip when things get busy.
+
+What We Built
+
+I built an automated pipeline that does all of that research on its own. The moment a sales rep marks an appointment as confirmed, the system instantly:
+
+
+Researches the company and its market
+Analyses the prospect's website
+Audits how the business appears on Google Maps
+Generates three clear, ready-to-read reports
+Files them automatically and notifies the sales team
+
+
+No manual searching, no copy-pasting — the briefing pack is simply there, ready, before the meeting.
+
+The Result
+
+
+Sales reps walk into every meeting fully prepared, with zero extra effort.
+Research that used to take time per prospect now happens instantly and consistently.
+The system handles large batches of prospects at once without breaking, and quietly corrects itself when it hits a snag.
+
+
+A repeatable, hands-off process that gives the sales team better information, faster — and frees them to focus on selling instead of searching.
+
+Associated with SoftSora
+
+---------
+
+# Finding Hidden Sales Leads on Autopilot (TSR) 2026 Jan
+
+**A custom automation system that quietly hunts down new companies for a sales team — every single day, without anyone lifting a finger.**
+
+---
+
+## The Client
+
+A Japanese enterprise whose sales team relied on a large internal database of companies to find and qualify new business. To keep that database useful, someone had to constantly track down companies that weren't in it yet — fresh prospects worth reaching out to.
+
+## The Problem
+
+For a long time, this was a manual job. A team member would visit popular job-posting sites by hand, scroll through listings, copy down company names, and then check each one against the internal database to see if it was already known. Anything new went on a list for the sales team.
+
+It worked, but barely. The process leaned entirely on one or two people, so the quality changed depending on who did it and how much time they had that week. Companies slipped through the cracks. Worse, Japanese company names are written in many different ways — full names, abbreviations, slight spelling differences — which made matching them against existing records slow and error-prone. An earlier attempt to automate parts of it kept running into strict time limits on the tools they'd tried, so it never became something they could depend on.
+
+In short: they knew valuable leads were out there, but they had no reliable way to find them. They'd never had a system that simply did this for them.
+
+## What We Built
+
+We built exactly that — a system that does the entire job on its own, start to finish.
+
+Every day, it automatically visits the major job sites where these companies advertise, gathers the company names, and tidies them up so that different spellings of the same business are recognized as one. It then checks each company against the client's internal database. Anything genuinely new gets added straight into their system as a fresh lead, and the sales team gets a short summary so they know what turned up — no digging required.
+
+What used to be hours of tedious, easy-to-skip manual work now happens quietly in the background, on schedule, with consistent quality every time.
+
+## How We Delivered It
+
+We rolled the project out in two clear stages so the client could see and trust the results before everything went live.
+
+**Stage one** focused on the hard part: reliably collecting the company information, cleaning it up, and matching the names correctly. The output was a simple, organized spreadsheet the team could review. This let everyone confirm the system was finding the right companies before we connected it to anything important.
+
+**Stage two** connected that proven pipeline directly into the client's existing tools. New leads now flow automatically into their database, and the sales team receives notifications when fresh companies are discovered. At this point the process became fully hands-off.
+
+Building it in stages meant the client was never asked to take a leap of faith — they saw it working at each step.
+
+## The Result
+
+The client went from a fragile, person-dependent routine to a dependable daily engine for new leads.
+
+The work no longer depends on any single person's availability or attention. The coverage is far more thorough, because the system never gets tired or skips a day. The messy company-name problem is handled automatically. And because we designed it to grow, new job sites or data sources can be added later without rebuilding anything.
+
+Most importantly, the sales team now spends its time acting on opportunities instead of hunting for them — which is exactly what they needed in the first place.
+
+---
+
+*Tools used: a self-hosted workflow automation platform (n8n) for the end-to-end process, connected to the client's existing company database via its API, with automated notifications to the sales team.*
+
+Associated with SoftSora
+------------
+
+# AI-Powered Sales Proposal Engine 2026 Mar (FILEMAKER)
+
+*Turning hours of manual prospect research into instant, ready-to-pitch sales recommendations, built for the Japanese market.*
+
+---
+
+## The Client
+
+A sales and marketing organization serving small and medium-sized businesses across Japan. Their team helps local companies (restaurants, clinics, salons, construction firms, retailers, and more) grow through web, advertising, and local search services.
+
+## The Challenge
+
+Their sales team was doing everything by hand.
+
+Before approaching any business, a salesperson had to play detective. They would open the company's website, check how fast it loaded, scroll through its Google reviews, look at its social media, guess whether its contract was up for renewal, and try to figure out what the business actually needed. Only then could they put together a pitch.
+
+This was slow, inconsistent, and easy to get wrong. One salesperson might spot an opportunity another would miss. Good leads went cold simply because no one had time to research them properly. And because every proposal was built from scratch, the quality depended entirely on who happened to be working that day.
+
+They had never had a system that could do this thinking for them. There was no single place that combined what they already knew about a customer with what was happening out in the real world. They needed a way to answer one simple question, instantly and reliably: *which client should we talk to next, and what should we offer them?*
+
+## What We Built
+
+We built an AI engine that does the research and the thinking automatically, then hands the sales team a ready-to-use proposal.
+
+It works in two layers that come together:
+
+**1. Understanding the customer they already have.** The engine reads the client's own records (contracts, plans, payment history, and account details) and spots the natural moments to reach out. A contract coming up for renewal. A customer using one service but missing an obvious second one. A business juggling several separate contracts that could be simplified into one. These are opportunities that were always there, just buried in data nobody had time to comb through.
+
+**2. Reading the outside world.** For each business, the engine quietly checks dozens of public signals and turns them into plain-language insights. A few examples:
+
+- The website loads slowly or shows "not secure" in the browser, so we can offer to fix and modernize it.
+- The footer still says it was last updated in 2018, a sign the site has been neglected and is ready for a refresh.
+- Social media accounts have gone quiet for months, opening the door to a management service.
+- Reviews keep mentioning the same complaint (long wait times, for example), which points to a specific, useful solution.
+- A competitor is outranking them on Google, or the business is hiring fast, both strong signals of the right moment to step in.
+- Seasonal timing (year-end sales, Golden Week, the back-to-school rush) makes certain offers land far better.
+
+The engine also tunes every suggestion to the local context. A pitch for a business in central Tokyo looks different from one for a shop in a regional town or a hotel in a tourist area, and the engine adjusts automatically. It even understands the language of each industry, so its suggestions sound informed rather than generic.
+
+The result is a steady stream of timely, relevant, context-aware proposals, each one explaining not just *who* to contact but *why now* and *what to offer*.
+
+## The Impact
+
+What used to take a salesperson an hour of digging now happens in seconds, and it happens the same way every time, for every prospect.
+
+- **Research becomes instant.** The team stops hunting for information and starts acting on it.
+- **Quality becomes consistent.** Every proposal is built on the same thorough analysis, regardless of who's at the desk.
+- **Opportunities stop slipping away.** Renewal windows, service gaps, and well-timed openings get surfaced automatically instead of being missed.
+- **Pitches actually fit.** Because each suggestion reflects the client's real situation and local market, they resonate far more than a one-size-fits-all approach.
+
+For the first time, the sales team had a system that thought like their best researcher, worked at the speed of software, and never got tired.
+
+## The Tech, Briefly
+
+The platform pairs the client's internal customer data with live public signals gathered from sources like Google, business listings, and review platforms. A decision layer interprets all of it and generates the final proposals, with everything optimized specifically for how small and medium businesses operate in Japan.
+
+Assocciated With SoftSora
+--------------_
+
+# Automated Weekly Deal Summaries for a Sales Team (2026 April) (HUBSPOT)
+
+**Client:** A Japan-based enterprise sales team
+**Type:** Workflow automation / CRM integration
+**Tools:** HubSpot, Google Chat, n8n
+
+## Overview
+
+A busy sales team had all of their deal information sitting inside HubSpot, but no easy way to stay on top of it. Every week, knowing which deals were about to close meant someone had to log in, dig through the system, and pull the numbers together by hand. Important deals could slip through the cracks simply because no one was looking at the right moment.
+
+We built a system that does this for them automatically. Every Monday morning, the team now receives a clean, ready-to-read summary of the deals closing that week, delivered straight into the Google Chat space they already use every day. No logging in, no manual checking, no missed opportunities.
+
+## The Challenge
+
+The team relied on HubSpot to manage their sales pipeline, but their plan did not include any automation features. That meant there was no built-in way to schedule reminders or send updates anywhere. The only option was to do it manually, every single week.
+
+On top of that, the information they wanted lived in one tool (HubSpot) while the team actually communicated in another (Google Chat). There was no bridge between the two. The result was extra work, inconsistent follow-up, and a constant risk of losing sight of deals that needed attention.
+
+They had never had a solution for this before. What they needed was simple to describe but tricky to deliver: the right information, at the right time, in the place they already work.
+
+## The Solution
+
+We created an automated weekly digest that connects HubSpot and Google Chat.
+
+Here is what happens, in plain terms:
+
+1. Every Monday at 9:00 AM, the system automatically checks the sales pipeline in HubSpot.
+2. It finds every deal expected to close within that week.
+3. It pulls together the key details for each one: the deal name, where it stands in the pipeline, the amount, and the closing date.
+4. It posts a tidy summary directly into the team's Google Chat space.
+
+The team starts the week already knowing exactly where to focus, without anyone lifting a finger.
+
+To make this work despite the limits of their HubSpot plan, we used a separate automation platform to act as the bridge between the two tools. This let us deliver full automation without asking the client to upgrade or change the systems they already relied on.
+
+## How We Delivered It
+
+We started small and proved the idea before committing to the full build. First, we created a working prototype in a test environment so the team could see the summaries land in Google Chat exactly as they would in real life. Once they confirmed it did what they needed, we moved everything into their own environment and connected it to their live sales data.
+
+This step-by-step approach meant there were no surprises. The client saw the result early, gave feedback, and only then did we roll it out for real.
+
+## The Result
+
+The team now gets a proactive, effortless view of their closing deals every week, delivered to the tool they already live in. What used to be a manual chore is now something they never have to think about.
+
+It is a small system with an outsized effect: less busywork, fewer missed deals, and a sales team that walks into each week already knowing what matters most.
+
+Associated with SoftSora
+------------------
+
+
+# Turning Scattered Contacts Into One Smart Customer Database (2026 May) (ZOHO CRM)
+
+**Client:** KOBUSHI Marketing — a Japan-based B2B marketing company
+**Project:** CRM unification & AI data enrichment (Phase 1)
+**Platform:** Zoho CRM · Google Sheets · n8n · Gemini API
+
+---
+
+## Overview
+
+KOBUSHI Marketing collects business contacts in two ways: people who sign up for their events, and people they meet face-to-face and exchange business cards with. For years, those contacts lived in completely separate places and were never properly joined up. We built the system that finally brought everything together — clean, unified, and automatically organized — so the team could run smarter outreach with far less manual work.
+
+---
+
+## The Challenge
+
+Before this project, KOBUSHI's customer data was a patchwork held together by hand.
+
+Their contacts were split across three different tools — their CRM, a business-card app, and a pile of Excel files. Because nothing was connected, the same person could show up in one place but be missing from another, and the team's email campaigns often reached an inconsistent, incomplete set of people.
+
+The information itself was uneven, too. Newer records had useful business details attached (company website, company size, industry), but thousands of older records had none of it. There was no reliable way to tell a company decision-maker apart from a junior employee, which made targeted outreach almost impossible.
+
+On top of that, the job-title field was a mess. A single role like "company president" had been entered dozens of different ways — different spellings, typos, formatting quirks, even garbled characters. With the data in that state, there was simply no clean way to filter the list and send the right message to the right people.
+
+In short: they had the contacts, but not a system that could actually use them. They'd never had one.
+
+---
+
+## What We Built
+
+We delivered exactly what they were missing — a single, organized, self-maintaining customer database.
+
+**One unified pipeline.** We reshaped how their business-card contacts flow into the CRM so they import the same clean way their event contacts do. New contacts now land in one place automatically, with duplicates caught and merged by email so nobody gets entered twice.
+
+**A full data clean-up and enrichment.** We brought every older record up to the same standard as the newer ones — automatically filling in missing details like company website and business information across roughly 6,000 contacts. What used to be a glaring gap in their data became a complete, consistent picture.
+
+**Automatic decision-maker sorting.** This was the centerpiece. We built logic that takes every messy job-title variation — 79 different ways of writing the same handful of roles — and normalizes them into a small set of clean, standard categories. From there the system automatically sorts every contact into the two lists that matter most to the business: decision-makers and everyone else. Out of about 6,700 contacts, the system cleanly identified more than 3,000 genuine decision-makers — a segmentation the team simply couldn't produce before.
+
+---
+
+## The Results
+
+- **One source of truth.** Contacts from every channel now live together in the CRM, instead of scattered across three disconnected tools.
+- **Complete, consistent data.** Thousands of previously bare records are now fully filled in, so the whole database can actually be used for outreach.
+- **Effortless targeting.** The team can now pull a clean list of decision-makers in seconds, rather than not being able to do it at all.
+- **Less manual work, fewer mistakes.** Messy data and duplicate-entry headaches are handled automatically, freeing the team from spreadsheet juggling.
+- **Remarkably low running cost.** The enrichment of all ~6,000 records was engineered to cost only a few dollars to run — a deliberate design choice, not an afterthought.
+
+---
+
+## Why It Worked
+
+The win here wasn't a flashy new tool — it was understanding the client's everyday reality and building precisely around it. We took three tangled data sources, a thousand inconsistencies, and a process that depended on manual effort, and turned them into one tidy system that mostly looks after itself.
+
+KOBUSHI Marketing went from "we have the contacts somewhere" to "we know exactly who our decision-makers are, and we can reach them with one click." That's the difference between owning data and being able to use it.
+
+Associated with SoftSora
+
+--------------------
+
+# Case Study: SunDevs Dashboard (2026 June)
+
+https://dashboard.sundevs.net
+
+The Challenge
+
+SunDevs—a software company providing managed hosting, licensing, and technical services—faced a critical problem: their customers lacked a centralized way to manage their assets, track service requests, and get support. Customer service teams were overwhelmed fielding repetitive questions about product purchases, server management, and license status. There was no self-service option, and customers felt frustrated by the fragmented experience across multiple systems.
+
+The company needed a unified platform where customers could independently manage their entire relationship with SunDevs, reduce support burden on the team, and create a seamless, modern experience.
+
+The Solution
+
+We built SunDevs Dashboard—a comprehensive web-based customer management platform that serves as the single source of truth for all customer interactions and asset management.
+
+Key Features
+
+1. Unified Dashboard
+
+Customers see a real-time overview of all their licenses, servers, and service requests in one place
+Interactive charts and status indicators provide instant visibility
+Theme customization (light/dark mode) based on user preference
+2. Self-Service Asset Management
+
+License Management: View, track, and manage product licenses with direct links to upgrade or extend
+Server Management: Monitor server status, view configurations, and manage hosted environments
+Service Requests: Create, track, and manage support requests with full visibility into status
+Scheduling: Book support calls with integrated calendar scheduling system
+3. Intelligent Support Chatbot
+
+A selection-based conversational assistant (no typing required) that guides customers through:
+Purchasing products and services
+Accessing documentation
+Creating service requests
+Scheduling support calls
+Context-aware responses based on customer's existing assets
+Built-in safeguards against duplicate requests and rate limiting to prevent abuse
+4. Security & Permissions
+
+Role-based access control (Customer vs. Admin)
+Discord OAuth2 authentication
+Comprehensive audit logging of all actions
+Email verification and account security features
+Technology Stack
+
+The application was built with modern enterprise technologies:
+
+Backend: Java 17, Spring Boot 3.5.0, Spring Security
+Frontend: Vaadin Flow (modern Java UI framework) with TypeScript
+Database: H2/MongoDB support for flexible deployment
+Real-time: WebSocket support for live updates via Vaadin Push
+Additional: Maven build system, comprehensive documentation
+The Impact
+
+For Customers:
+
+Instant self-service access to account information (no waiting for support)
+Reduced friction in purchasing and support processes
+Clear visibility into all assets and service status
+24/7 availability to manage accounts
+For SunDevs:
+
+Dramatically reduced support workload through automation
+Scalable platform that handles unlimited customers without proportional staffing increase
+Rich data insights into customer behavior and needs
+Improved customer retention through better experience
+Technical Highlights
+
+2,857+ lines of comprehensive documentation including specifications, implementation guides, and visual diagrams
+Sophisticated state machine for the chatbot with 20+ states and 11 major conversation flows
+Production-ready codebase with detailed implementation guides and best practices
+Enterprise security including rate limiting, audit logging, and role-based access
+Outcome
+
+SunDevs Dashboard transformed the company's customer experience from reactive (waiting for support) to proactive (self-service 24/7). The platform eliminated repetitive support requests, created a modern touchpoint for customer engagement, and provided a foundation for future growth—all while maintaining security, compliance, and scalability.
+
+Associated with SunDevs
+
+
+------------
+
+# SunLicense: Software License Management Platform (2025 Jan)
+
+https://store.sundevs.net/l/sunlicense
+
+The Challenge
+
+Software companies struggle with a fundamental problem: managing software licenses across multiple products, customers, and requests is complex and error-prone. Organizations face scattered spreadsheets, no unified view of their licensing landscape, difficulty tracking customer requests, and security concerns around API access. Without a centralized solution, companies waste time on manual processes, risk revenue loss through license mismanagement, and lack visibility into their own business.
+
+The Solution
+
+SunLicense is a comprehensive, web-based license management platform that consolidates all aspects of software licensing into one secure, easy-to-use dashboard. It was built to solve these exact pain points—providing complete control over products, licenses, customers, and license requests in real time.
+
+What We Built
+
+Core Features
+
+Admin Dashboard
+
+Centralized hub with real-time visibility into all licenses, products, and customers
+Built-in analytics and reporting to track license status at a glance
+One-click access to all management functions
+License Management
+
+Create, assign, and revoke licenses in seconds
+Track license expiration, usage, and validity
+Automated workflows for license renewal and customer requests
+Bulk operations for managing multiple licenses simultaneously
+Customer Portal
+
+Self-service dashboard for customers to view their active licenses
+Transparent license request submission and tracking
+Reduced support overhead through customer self-service
+Secure REST API
+
+Programmatic access for integration with third-party systems
+Token-based authentication with granular permissions (intent-based access control)
+Fully documented API for custom integrations
+Blacklist Management
+
+Flag and manage revoked or compromised licenses
+Automatic enforcement across the platform
+Real-time updates
+Discord Integration
+
+Automated notifications and alerts to team channels
+Embeddable license data directly in Discord for easy monitoring
+No need to leave your communication platform
+Technical Excellence
+
+Built with modern, production-grade technology:
+
+Spring Boot 3.3.5 — Scalable Java backend with Spring Security for authentication
+Vaadin 24.5.4 — Responsive web UI that works seamlessly on desktop and mobile
+Discord OAuth2 — Secure single sign-on integrated with Discord
+REST API v2 — Token-based authentication with intent-driven authorization
+H2 Database — Reliable, file-based persistence
+Comprehensive Testing — Automated test suite (Playwright + TypeScript) ensuring reliability
+Real-World Impact
+
+✅ Time Saved — Manual license tracking replaced by automated management
+✅ Revenue Protected — Accurate license tracking prevents revenue leakage
+✅ Customer Satisfaction — Self-service portal reduces support requests
+✅ Scalability — Handles unlimited products, licenses, and customers
+✅ Security — Role-based access control, API token management, and audit trails
+✅ Integration Ready — REST API enables seamless connection with existing systems
+
+Who It's For
+
+SaaS companies needing to manage software subscriptions and licensing at scale
+Enterprise software vendors distributing to multiple customers
+Teams with growing customer bases outgrowing spreadsheet solutions
+Organizations requiring compliance with strict license tracking requirements
+
+Associated with Sundevs
+
+--------------_
+
+# SunGuard: Making Code Protection Accessible to Every Developer (2025 May)
+
+https://store.sundevs.net/l/sunguard
+
+The Problem
+
+For years, protecting proprietary code from theft and reverse engineering has been a luxury reserved for enterprise software companies. Most developers—whether independent contractors, startup founders, or small development teams—lacked access to affordable, practical tools for code obfuscation. Those who needed this protection faced a painful reality: expensive proprietary solutions, complex setup processes, or no solution at all.
+
+The few tools that existed were either too technical for casual users or prohibitively expensive. Developers found themselves choosing between leaving their source code vulnerable or investing time and resources into complicated, enterprise-grade security solutions.
+
+The Solution
+
+SunGuard was built to solve this exact problem. It's a unified, developer-friendly code obfuscation platform that brings enterprise-grade protection within reach of everyone.
+
+At its core, SunGuard provides a clean, accessible interface that lets developers protect their code without needing a Ph.D. in security. The platform supports multiple obfuscation engines—including ProGuard, yGuard, and Skidfuscator—and automatically manages the complexity under the hood.
+
+Key capabilities include:
+
+Multi-engine support: Choose from industry-leading obfuscation tools without needing to learn each one individually
+Automated dependency management: The system automatically downloads and configures necessary tools
+Flexible configuration: Control what gets obfuscated and what stays clear (useful for keeping debugging information intact)
+Web-based interface: Built with modern web technologies (Spring Boot, Vaadin, TypeScript), making it accessible from any browser
+Progress tracking: Real-time feedback during the obfuscation process
+Java & JavaScript support: Protect code written in multiple languages
+Impact
+
+SunGuard democratized code obfuscation. What was once a headache—or an impossible task for resource-constrained teams—is now as simple as uploading a file and clicking "Obfuscate."
+
+Developers no longer have to choose between security and simplicity. SunGuard proves that powerful developer tools don't need to be complicated.
+
+Associated with SunDevs
+
+------------
+
+# SunLinks: Professional URL Management Platform (2026-Mar)
+
+https://store.sundevs.net/l/sunlinks
+
+Case Study
+
+The Challenge
+
+Many organizations struggle with managing their shared links at scale. Teams across marketing, support, and communications share URLs across emails, social media, documents, and campaigns—but without visibility into how those links perform. Traditional solutions offered by services like Bitly or TinyURL work well, but they require ongoing subscriptions, lock data into proprietary platforms, and limit customization. Companies needed something they could own and control, with deep analytics built in from day one.
+
+The Solution
+
+SunLinks is a self-hosted URL shortening platform that gives organizations complete control over their link management and analytics. Built on modern Java technology, it provides everything teams need to shorten URLs, track link performance, and automate link workflows—all running on their own servers.
+
+Core Capabilities:
+
+Link Management: Create custom short codes (like /blog or /promo) with full control over redirects, expiration, and password protection
+Analytics Dashboard: Comprehensive real-time analytics showing clicks by geography, device type, browser, and referrer source through interactive charts
+QR Code Generation: Automatic QR code creation for every link, with customizable sizing and styling
+Developer API: Full-featured REST API with rate limiting and API key management, enabling integration with existing tools and automation
+Zero Configuration: Runs out-of-the-box as a single Java executable—no complex setup required
+Why It Matters
+
+Organizations deploying SunLinks immediately gain:
+
+Complete Data Ownership: No third-party service holding their link data
+Advanced Analytics: Understand where traffic comes from and who's clicking their links
+Flexibility: Customize domains, branding, and workflows to match their needs
+Cost Efficiency: No per-click or subscription fees; scale unlimited links without additional cost
+Integration Ready: The built-in API allows SunLinks to become part of their broader automation strategy
+Key Features in Action
+
+An enterprise marketing team uses SunLinks to track campaign performance. They create links for each social channel variant of the same content, then monitor the dashboard to see which platform drives engagement. Support teams use custom short codes for frequently shared help articles. Development teams leverage the API to programmatically generate and track links in their documentation systems.
+
+Technical Foundation
+
+SunLinks is built on proven enterprise technologies:
+
+Spring Boot 3.3 for a robust, scalable backend
+Vaadin 24 for a modern, responsive web interface
+H2 embedded database for simple, serverless operation
+ApexCharts for interactive data visualization
+The platform is designed to be self-hosted, meaning users maintain full control over security, compliance, and data residency.
+
+Impact
+
+Organizations deploying SunLinks replace subscription-based link management with a powerful, owned solution. Teams gain actionable insights into link performance while maintaining complete data privacy. The platform scales from small teams to enterprises, with an intuitive interface that requires no technical expertise.
+
+Associated With Sundevs
+
+-----------
+
+# SunPaste: Self-Hosted Code & Text Sharing Platform (2026 June)
+
+https://store.sundevs.net/l/sunpaste
+
+The Challenge
+
+Teams and developers frequently need to share code snippets, configuration files, and sensitive information quickly—but they faced a frustrating dilemma: public paste services like Pastebin exposed their content to the internet, creating security and privacy concerns. Organizations couldn't run them on their own infrastructure, and existing solutions lacked the flexibility to balance ease-of-use with control. There was no middle ground: either sacrifice privacy to a third-party, or implement something complex from scratch.
+
+The Solution
+
+SunPaste was built as a self-hosted paste sharing platform designed specifically for teams that need control without complexity. The application provides a clean, intuitive interface for creating and sharing code, text, and developer notes—deployed entirely on your own servers.
+
+Key capabilities include:
+
+Flexible sharing controls — Public, unlisted, or private pastes with granular permissions
+Security-first features — Optional password protection, self-destruct-after-view pastes, and time-based expiration
+Developer-ready tools — REST API with API keys for automation, syntax highlighting for dozens of languages, and QR code generation for easy sharing
+Administrative oversight — Complete instance management with user roles, customizable themes, and detailed system monitoring
+Discord integration — Share and manage pastes directly from Discord slash commands
+Data portability — Full backup/restore capabilities and personal content export
+Technical Execution
+
+Built as a Spring Boot application with a modern Vaadin frontend, SunPaste combines enterprise-grade backend reliability with an accessible web interface. The architecture supports large pastes with efficient filesystem overflow, real-time language detection, and responsive design for mobile and desktop. Comprehensive REST API documentation via Swagger and ReDoc ensures smooth integration into existing workflows.
+
+Impact
+
+SunPaste eliminates the false choice between security and convenience. Organizations can now operate their own paste service, maintain complete data ownership, and give users a familiar, polished experience—all without external dependencies or vendor lock-in.
+
+Assoicated with Sundevs
+
+
+-----------
+
+# Case Study: HAG — Human Approval Gateway (HAG) (2026 May)
+
+The Challenge
+
+Modern software organizations face a critical bottleneck: getting human approval for sensitive operations. When a system needs to deploy code to production, process a high-value transaction, or trigger important business actions, that approval decision often gets lost between teams, tools, and channels.
+
+Teams were manually checking emails, Slack messages, and ticketing systems. Approval workflows were fragmented, slow, and prone to error. There was no reliable way to route approval requests, track who responded, and automatically notify dependent systems of the decision—all while keeping the conversation visible in the tools people already use every day.
+
+The Solution
+
+We built HAG (Human Approval Gateway)—a self-hosted service that bridges the gap between systems that need approval and the people who give it.
+
+HAG works by listening for approval requests from any system, instantly delivering those requests as interactive Slack messages to the right people or channels, and automatically notifying the originating system once a decision is made. No more manual handoffs. No more lost approvals. No more guessing who decided what.
+
+How It Works (In Plain Terms)
+
+Request: Your system sends an approval request to HAG with a message, who needs to respond, and where to send the decision.
+Notify: HAG immediately posts an interactive message to each recipient's Slack DM or channel.
+Respond: Recipients click "Approve" or "Reject" directly in Slack.
+Decide: HAG applies your approval rule (first response wins, or all must agree) and posts the decision back to your system.
+The entire flow happens in seconds. Slack becomes your approval interface. Your systems stay in sync.
+
+Key Benefits
+
+Speed: Approval decisions go from minutes (hunting people down) to seconds (Slack notification).
+Transparency: Every approval is logged, audited, and visible to stakeholders.
+Reliability: No more lost messages, missed emails, or bottlenecks from unavailable approvers.
+Integration: Works with any system that can make an HTTP request—no custom connectors needed.
+Control: Built on open, simple rules: approve if anyone responds, or wait for everyone.
+Real-World Use
+
+HAG is used for deployment gates, high-value transaction approvals, access requests, and incident escalations—anywhere a system needs a human decision point that's fast, auditable, and can't be missed.
+
+HAG is a self-hosted Java service, ready to deploy behind your own infrastructure, connecting your critical workflows to the approvers who matter.
+
+Assoicated with SoftSora
+
+-------------
+
+
+# OPProtector: A Case Study (2023 July)
+
+https://github.com/ka0un/OPProtector
+
+The Challenge
+
+Minecraft server administrators face a persistent and costly problem: unauthorized access to operator accounts. A single compromised operator account—whether through a malicious staff member, account takeover, or a moment of negligence—can grant someone unrestricted power over the entire server. The consequences are severe: griefing, data theft, server destruction, and the loss of player trust.
+
+For years, server owners had no automated way to detect when operators were abusing their privileges or when unauthorized access was occurring. They relied on manual monitoring, server logs they had to manually parse, and reactive responses after damage was already done. It was a vulnerability no one had adequately solved.
+
+The Solution
+
+OPProtector was built to solve exactly this problem. It's a security plugin for Minecraft servers that automatically scans and monitors operator accounts in real time, flagging any suspicious activity or unauthorized access attempts before they become catastrophic.
+
+How it works:
+
+Continuous Monitoring: The plugin continuously watches operator behavior for signs of compromise or abuse
+Automated Detection: It identifies blacklisted permissions and unauthorized access patterns instantly
+Real-time Alerts: Server administrators are immediately notified when threats are detected
+Preventive Action: By catching threats early, it stops breaches before significant damage occurs
+The Impact
+
+Since launch, OPProtector has been adopted by thousands of Minecraft servers (tracked across multiple platforms). The plugin has garnered strong community support with 75+ stars and consistent engagement.
+
+Key Results:
+
+19,000+ servers protected (and counting)
+Thousands of players across multiple servers using protected infrastructure
+Zero false positives through intelligent threat detection
+Immediate threat response instead of hours of damage control
+Server administrators can now rest assured that their operator accounts—and by extension, their entire servers—are actively protected against unauthorized access and malicious abuse.
+
+Why It Matters
+
+OPProtector fills a critical gap in Minecraft server security. It transformed server protection from a manual, reactive process into an automated, proactive system. Administrators no longer have to choose between trusting staff completely or monitoring logs themselves. The plugin does the heavy lifting, giving server owners back their peace of mind.
+
+Associated with SunDevs
+
+-----------------------
+
+# Case Study: Discord Leaderboards (2023 April)
+https://github.com/ka0un/DiscordLeaderboards
+
+The Challenge
+
+Minecraft server communities thrive on competition and engagement. Server owners wanted to showcase top players directly in their Discord communities—highlighting achievements, stats, and rankings in real-time. But they faced a problem: there was no simple way to automatically extract leaderboard data from their servers and display it in Discord without building custom integrations from scratch.
+
+Existing solutions either didn't exist, required complex manual setup, or came with steep learning curves and high costs. Community managers were stuck manually updating rankings or struggling with workarounds that weren't reliable or scalable.
+
+The Solution
+
+Discord Leaderboards was built to solve this exact problem. It's a lightweight Minecraft plugin that connects server data directly to Discord, making it effortless for communities to display live leaderboards.
+
+The tool automatically:
+
+Pulls player rankings using PlaceholderAPI, tapping into any stat you want to track
+Posts to Discord via webhooks or integrates seamlessly with DiscordSRV for slash commands
+Updates on schedule—hourly, daily, weekly, or monthly—completely hands-free
+Works across all versions of Minecraft (1.8.8 through 1.19.4)
+Scales infinitely with support for unlimited custom leaderboards
+The Impact
+
+Since launch, the plugin has been adopted across hundreds of servers and thousands of players. It's earned recognition as a go-to solution for Minecraft Discord integration, with:
+
+40+ GitHub stars and growing community support
+Released on major platforms (SpigotMC, BuildByBit, PolyMart)
+Active development with continuous improvements and a premium version for advanced features
+Open source (MIT License), making it accessible and trustworthy
+Why It Matters
+
+Discord Leaderboards transformed how Minecraft communities engage. What was once a technical hurdle—integrating server data with Discord—is now a one-command setup. Server owners can focus on building their community while the plugin handles the rest.
+
+This is my first commerical software product and it built me the path for start the company sundevs.
+
+Associated with SunDevs
+
+---------------
+
+
+# SummitEvents: Timed Event Management Plugin for Minecraft Servers (2023 October)
+
+The Challenge
+
+Running a Minecraft server comes with unique operational demands. Server administrators needed a way to organize and execute time-limited competitive events for their player communities—events like mining competitions or resource farming challenges. However, coordinating these events manually was tedious and error-prone. There was no straightforward way to:
+
+Launch scheduled events with consistent messaging across all players
+Track player performance and rankings in real-time
+Automatically reward top performers based on their scores
+Display event progress and remaining time to engaged players
+The Solution
+
+We developed SummitEvents, a comprehensive event management system for Minecraft servers. The plugin provides administrators with complete control over creating, launching, and managing time-bound competitive events.
+
+Key Features:
+
+Event Creation & Configuration – Administrators can define custom events with specific activities (block breaking, farming, etc.), duration, and participant goals
+Real-Time Leaderboards – Players automatically earn points for completing event objectives; a dynamic leaderboard tracks rankings live
+Automated Messaging & Notifications – Configurable broadcast messages alert players when events start, end, and at regular intervals showing leaderboard updates
+Visual HUD Display – Boss bar integration displays event progress, player score, current position, and time remaining—all visible to active participants
+Reward System – Upon event conclusion, the system automatically executes configured commands to reward top performers with prizes or recognition
+Flexible Event Types – Support for multiple event categories (block breaking, natural block breaking, crop farming) with customizable materials
+Impact
+
+SummitEvents transformed how our client's server community engaged with competitive content. Events became easier to organize, more engaging for players with real-time progress tracking, and more rewarding with automated recognition systems. The plugin's configuration-driven design meant the client could launch diverse event types without modifying code, maintaining full control over messaging, timing, and rewards.
+
+The system successfully enabled server administrators to create memorable, structured experiences that kept their community engaged and coming back for more.
+
+Tech Stack: Java, Bukkit/Spigot (Minecraft plugin framework), YAML configuration, asynchronous task scheduling
+
+Associated with SummitRealms
+
+----------
+

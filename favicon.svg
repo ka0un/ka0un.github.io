@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Kasun Hapangama">
+  <rect width="64" height="64" rx="14" fill="#0e0d0c"/>
+  <g fill="none" stroke="#e2552b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16 V48"/>
+    <path d="M22 32 L41 15"/>
+    <path d="M22 32 L41 49"/>
+  </g>
+</svg>

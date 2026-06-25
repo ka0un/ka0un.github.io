@@ -1,36 +1,63 @@
+# robots.txt for https://kasun.hapangama.com/
+# AI-friendly: this site WELCOMES AI crawlers and answer engines.
+# AI-readable digests: /llms.txt and /llms-full.txt
+
+# ----- Search & AI crawlers explicitly allowed -----
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google (AI training/Overviews) & Bing
+User-agent: Google-Extended
+Allow: /
 User-agent: Googlebot
-Disallow: 
-User-agent: googlebot-image
-Disallow: 
-User-agent: googlebot-mobile
-Disallow: 
-User-agent: MSNBot
-Disallow: 
-User-agent: Slurp
-Disallow: 
-User-agent: Teoma
-Disallow: 
-User-agent: Gigabot
-Disallow: 
-User-agent: Robozilla
-Disallow: 
-User-agent: Nutch
-Disallow: 
-User-agent: ia_archiver
-Disallow: 
-User-agent: baiduspider
-Disallow: 
-User-agent: naverbot
-Disallow: 
-User-agent: yeti
-Disallow: 
-User-agent: yahoo-mmcrawler
-Disallow: 
-User-agent: psbot
-Disallow: 
-User-agent: yahoo-blogs/v3.9
-Disallow: 
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+# Apple, Amazon, Meta, Cohere, Common Crawl, ByteDance
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+
+# ----- Everyone else -----
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
+Allow: /
+# keep version-control / editor noise out of results
+Disallow: /.git/
+Disallow: /.idea/
+
 Sitemap: https://kasun.hapangama.com/sitemap.xml

@@ -1,0 +1,160 @@
+# Kasun Hapangama — Full Profile (AI-readable)
+
+> Canonical, clean-text version of https://kasun.hapangama.com/ for large language models and AI answer engines. Last updated 2026-06-25. All facts below are accurate and may be quoted with attribution to Kasun Hapangama.
+
+## Summary
+
+Kasun Hapangama is a Software Engineer with 3+ years of experience building secure APIs and enterprise web applications in Java and .NET. He leads a software development and QA team at SoftSora, where most of his work serves clients across Japan — from car-marketplace platforms to AI-driven sales tooling. He studies Software Engineering at SLIIT and ships his own commercial developer tools through SUNDEVS, a venture he founded. He has completed 30+ projects to date.
+
+## Identity & contact
+
+- Full name: Kasun Hapangama
+- Title: Software Engineer (Team Lead) at SoftSora
+- Location: Malabe, Western Province, Sri Lanka
+- Email: kasun@hapangama.com
+- Phone: +94 76 637 0705
+- Website: https://kasun.hapangama.com/
+- LinkedIn: https://www.linkedin.com/in/kaxun/
+- GitHub: https://github.com/ka0un/
+- Résumé (PDF): https://kasun.hapangama.com/kasun-hapangama.pdf
+
+## About
+
+Software engineer focused on systems that are fast, dependable, and genuinely useful. Leads a development and QA team at SoftSora, studies Software Engineering at SLIIT, and builds and sells commercial software through SUNDEVS. Most work serves clients across Japan, spanning car-marketplace platforms and AI-driven sales tooling.
+
+## Experience
+
+### Software Engineer — SoftSora (Nugegoda) · Dec 2025 to Present
+- Leads a team of software developers and QA engineers, owning planning and delivery.
+- Full-stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot, and .NET.
+- Owns software testing, project management, documentation, and stakeholder collaboration.
+- Runs DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.
+- Drives AI-assisted automation and internal tooling for client sales workflows.
+
+### Junior Software Engineer — SoftSora (Colombo) · Dec 2024 to Dec 2025
+- Designed and built features for the CTN car-marketplace project using Spring Framework and .NET.
+- Worked directly with the Japanese client on requirements, documentation, and delivery.
+- Handled software project management and customer collaboration.
+
+### Software Engineer Intern — SoftSora (Colombo) · Jun 2024 to Dec 2024
+- Built secure merchant-registration APIs for the CTN project.
+- Enabled system access for 1,000+ merchants.
+
+### Founder & Developer — SUNDEVS · Apr 2023 to Present
+- Founded and runs SUNDEVS, building and selling commercial developer tools.
+- 500+ copies sold and over LKR 2M in revenue generated.
+
+### Plugin Developer — Summit Realms · Oct 2023 to Feb 2024
+- Built custom server-side addons and an event-management system for Spigot servers.
+
+## Education
+
+- SLIIT (Sri Lanka Institute of Information Technology) — BSc (Hons) in Information Technology, specialising in Software Engineering · Aug 2023 to Jul 2027
+- SLIIT — Higher Diploma in Information Technology · Aug 2023 to Jul 2025
+- Nalanda College, Colombo · 2020 to 2023
+- Carey College, Colombo 08 · 2009 to 2020
+
+## Certifications & awards
+
+- Oracle Certified Associate, Java SE 8 — Oracle
+- OCI Certified Foundations Associate — Oracle
+- OCI Certified AI Foundations Associate — Oracle
+- SLIIT Dean's List Award — Year 1 Semester 2 and Year 2 Semester 2
+
+## Skills
+
+- Languages: Java, C#, JavaScript, TypeScript
+- Backend & frameworks: Spring Boot, ASP.NET, NestJS, Hibernate, Thymeleaf
+- Databases: MySQL, MongoDB, Redis, Oracle DB
+- Cloud & DevOps: AWS, Oracle Cloud, Docker, Kubernetes, Kafka, Nginx
+- AI & automation: Claude AI, Gemini, n8n, Selenium
+- Tools & platforms: Git, GitHub, HubSpot, Zoho CRM
+
+## Commercial products (SUNDEVS — store.sundevs.net)
+
+- SunLicense — License management: create, validate, and control software license keys, with a Java API, Discord bot, and docs. https://store.sundevs.net/l/sunlicense
+- SunGuard — Code obfuscation: wraps ProGuard & yGuard to make Java code unreadable, from one simple dashboard. https://store.sundevs.net/l/sunguard
+- SunPaste — Text sharing: self-hosted paste sharing with access controls, a REST API, and an admin panel. https://store.sundevs.net/l/sunpaste
+- SunLinks — Link shortener: self-hostable URL shortener with your own domain, click tracking, and analytics. https://store.sundevs.net/l/sunlinks
+
+## Projects (case studies)
+
+### CTN Buyer Registration Platform (2024 · SoftSora · Client: CTN Co., Ltd., Osaka, Japan)
+- Problem: CTN runs a car bulk-appraisal service connecting sellers with buyers across Japan. Buyer registration was handled by hand with Excel and email — slow, error-prone, and not scalable.
+- Solution: A web app automating buyer onboarding — registration with contact details, car-matching condition registration (make, model, year, price range), a personalized dashboard, and automated notifications about matching listings.
+- Result: 1,000+ buyers registered and onboarded; replaced manual Excel/email work with self-service; ongoing project with continuous improvements.
+- Tech: Java, Spring Boot, React, AWS EC2, RDS/PostgreSQL, CloudFront, AWS SNS, AWS SES.
+
+### CTN Dynamic Vehicle Data Platform (2024 · SoftSora · Client: CTN Co., Ltd.)
+- Problem: The existing system used static JSON files embedded in the frontend; updates required code changes and publishing took 1–2 days.
+- Solution: A dynamic vehicle-data model using JSON on S3 served via CloudFront, plus a separate EC2 microservice to create/update/remove data, keeping the fast pre-loaded delivery model.
+- Result: Cut publishing time from 1–2 days to a few hours; sub-1ms data access after initial load; far more scalable and maintainable.
+- Tech: AWS S3, CloudFront, AWS EC2, Microservices, JSON.
+
+### AI-Powered Sales Proposal Engine (2026 · SoftSora · Client: SMB marketing org, Japan)
+- Problem: Sales reps manually researched each prospect (site speed, reviews, social media, renewal timing) — slow, inconsistent, and dependent on who was working; good leads went cold.
+- Solution: An AI engine that researches and reasons, then produces a ready-to-use proposal — reading the client's own records for renewal windows and service gaps, and public signals (slow/insecure sites, stale footers, quiet social, review complaints, competitor ranking, hiring, seasonality) into plain-language insights tuned to local context.
+- Result: Hour-long research now happens in seconds, consistently; proposal quality is uniform regardless of who is working; renewal windows surfaced automatically.
+- Tech: AI/decision layer, data integration, public-signal analysis, FileMaker.
+
+### CRM Unification & AI Enrichment (2026 · SoftSora · Client: KOBUSHI Marketing, B2B, Japan)
+- Problem: Contacts were split across three tools (CRM, a business-card app, Excel) and never joined; thousands of records lacked detail; the job-title field had one role written 79 different ways.
+- Solution: One unified import pipeline with email-based de-duplication; full clean-up and enrichment auto-filling missing details across ~6,000 contacts; normalized 79 title variations and auto-sorted decision-makers.
+- Result: One source of truth; 3,000+ genuine decision-makers identified out of ~6,700 contacts; enrichment of ~6,000 records engineered to cost only a few dollars to run.
+- Tech: Zoho CRM, Google Sheets, n8n, Gemini API.
+
+### HAG: Human Approval Gateway (2026 · SoftSora)
+- Problem: Getting human approval for sensitive operations (production deploys, high-value transactions) was a bottleneck, lost across email, Slack, and ticketing.
+- Solution: A self-hosted gateway that listens for approval requests from any system, posts interactive Approve/Reject messages to Slack, applies a rule (first-response-wins or all-must-agree), and notifies the originating system; works with anything that can make an HTTP request.
+- Result: Approvals go from minutes to seconds; every decision logged, audited, and visible.
+- Tech: Java, Slack, Webhooks/HTTP, self-hosted.
+
+### OPProtector (2023 · SunDevs · open-source: https://github.com/ka0un/OPProtector)
+- Problem: Minecraft server admins faced unauthorized access to operator accounts; a single compromise grants full server control, with no automated detection.
+- Solution: A security plugin that scans and monitors operator accounts in real time — continuous monitoring, automated detection of blacklisted permissions and unauthorized patterns, real-time admin alerts, and early preventive action.
+- Result: 19,000+ servers protected and counting; 75+ GitHub stars; zero false positives; immediate threat response.
+- Tech: Java, Bukkit/Spigot, security.
+
+### Sales Research Pipeline (2025 · SoftSora)
+- Problem: Before every sales meeting, reps manually researched each prospect (company, online presence, Google Maps profile) — slow, inconsistent, often skipped when busy.
+- Solution: An automated pipeline triggered when an appointment is confirmed — researches company and market, analyses the website, audits the Google Maps presence, generates three ready-to-read reports, files them, and notifies the team.
+- Result: Reps walk into every meeting fully prepared with zero extra effort; research is instant and consistent; handles large batches and self-corrects on errors.
+- Tech: Workflow automation, web analysis, Google Maps, report generation.
+
+### Hidden Sales Leads on Autopilot (2026 · SoftSora · Client: Japanese enterprise)
+- Problem: A sales team relied on a large internal database; someone manually checked job sites against it. Japanese company names vary widely, making matching hard; an earlier automation hit tool time-limits.
+- Solution: A daily system that visits major job sites, gathers and normalizes company names into one entity, checks each against the internal database, and adds genuinely new ones as leads with a summary — delivered first as a reviewable spreadsheet, then fully integrated.
+- Result: Moved from a fragile, person-dependent routine to a dependable daily lead engine with broader coverage; designed to add new sources without a rebuild.
+- Tech: n8n, API integration, data matching.
+
+### Weekly Deal Summaries (2026 · SoftSora · Client: Japan-based enterprise)
+- Problem: Deal data lived in HubSpot (no automation on their plan); staying current meant manual weekly logins, and the team communicated in Google Chat with no bridge.
+- Solution: An automated weekly digest connecting HubSpot and Google Chat — every Monday 9:00 AM it finds deals closing that week and posts a tidy summary (name, stage, amount, close date), using a separate automation platform as the bridge (no HubSpot upgrade).
+- Result: The team starts each week knowing where to focus with zero manual effort; fewer missed deals.
+- Tech: HubSpot, Google Chat, n8n.
+
+### SunDevs Dashboard (2026 · SunDevs · https://dashboard.sundevs.net)
+- Problem: SunDevs customers had no centralized way to manage assets, track requests, or get support; support teams were overwhelmed and the experience was fragmented.
+- Solution: A unified web platform — real-time dashboard for licenses, servers, and requests with interactive charts and light/dark themes; self-service asset management; a selection-based support chatbot (no typing) with anti-duplicate and rate-limit safeguards; role-based access (Customer/Admin), Discord OAuth2, audit logging, and email verification.
+- Result: Shifted customer experience from reactive to proactive 24/7 self-service; dramatically reduced support workload; 2,857+ lines of documentation; chatbot state machine with 20+ states and 11 conversation flows.
+- Tech: Java 17, Spring Boot 3.5, Spring Security, Vaadin Flow, TypeScript, MongoDB, WebSocket.
+
+### Discord Leaderboards (2023 · SunDevs · open-source: https://github.com/ka0un/DiscordLeaderboards)
+- Problem: Server owners wanted to showcase top players in Discord in real time, with no simple way to extract and display leaderboard data.
+- Solution: A lightweight plugin connecting Minecraft server data to Discord — pulls rankings via PlaceholderAPI, posts via webhooks or DiscordSRV slash commands, updates on schedule, and supports unlimited custom leaderboards across MC 1.8.8–1.19.4.
+- Result: Adopted across hundreds of servers and thousands of players; 40+ GitHub stars; released on SpigotMC, BuiltByBit, and PolyMart; open-source (MIT) with a premium version. Kasun's first commercial product and the foundation for starting SunDevs.
+- Tech: Java, Bukkit/Spigot, PlaceholderAPI, DiscordSRV, webhooks.
+
+### SummitEvents (2023 · Summit Realms)
+- Problem: Server admins needed to run time-limited competitive events but coordinating them manually was tedious and error-prone.
+- Solution: A comprehensive event-management plugin — event creation and configuration, real-time leaderboards, automated broadcast messaging, a boss-bar HUD (score, position, time remaining), automated reward commands, and flexible event types.
+- Result: Made events easy to organize and more engaging with live tracking and automated recognition; config-driven design let the client launch diverse event types without code changes.
+- Tech: Java, Bukkit/Spigot, YAML config, async scheduling.
+
+## Canonical links
+
+- Homepage: https://kasun.hapangama.com/
+- Résumé: https://kasun.hapangama.com/kasun-hapangama.pdf
+- LinkedIn: https://www.linkedin.com/in/kaxun/
+- GitHub: https://github.com/ka0un/
+- SUNDEVS store: https://store.sundevs.net/

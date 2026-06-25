@@ -1,0 +1,43 @@
+CONSTRAINTS - Kasun Hapangama Portfolio
+=======================================
+
+This website (index.html) is built and maintained under the following
+hard rules. Any future edit must keep ALL of these true.
+
+1. NO CSS
+   - No <style> tags.
+   - No style="..." attributes.
+   - No external stylesheets (no <link rel="stylesheet">).
+   - No CSS of any kind. The page relies entirely on the browser's
+     default rendering of semantic HTML tags.
+
+2. NO EMOJIES
+   - No emoji characters.
+   - No emoji HTML entities (for example no &#128075; style codes that
+     render as pictographs).
+   - Plain text and standard typographic symbols only.
+
+3. NO EM-DASH ( the long dash character )
+   - Do not use the long dash character.
+   - Do not use its entity form either.
+   - Use a comma, the word "to", or a plain hyphen instead.
+
+ALLOWED
+   - Plain semantic HTML tags (header, nav, section, article, h1-h3,
+     p, ul, li, dl, dt, dd, table, tr, th, td, details, summary,
+     fieldset, legend, blockquote, code, kbd, mark, meter, small,
+     strong, em, big, time, address, hr, center).
+   - Layout-only HTML attributes on the wrapper table
+     (width, border, cellspacing, cellpadding). These are HTML
+     attributes, not CSS.
+   - Safe text symbols: middot, hyphen, arrow (rarr), ampersand,
+     non-breaking space.
+
+HOW TO VERIFY (run from this folder)
+   grep -c "<style" index.html        -> must be 0
+   grep -c "style=" index.html        -> must be 0
+   grep -ci "stylesheet" index.html   -> must be 0
+   grep -ci "<font" index.html        -> must be 0
+   Search the file for any emoji or long-dash characters -> must be none.
+
+Last updated: 2026-06-14
