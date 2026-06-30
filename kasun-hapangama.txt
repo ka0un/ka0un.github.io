@@ -1,0 +1,266 @@
+KASUN HAPANGAMA · SOFTWARE ENGINEER
+kasun.hapangama.com · kasun@hapangama.com
+linkedin.com/in/kaxun · github.com/ka0un · resume: kasun.hapangama.com/kasun-hapangama.pdf
+Malabe, Western Province, Sri Lanka
+
+─── ABOUT ───────────────────────────────────────────────────────────────────
+3+ years experience · 40+ projects completed
+I'm a software engineer with 3+ years building secure APIs and enterprise web applications. I lead a development and QA team at SoftSora, study Software Engineering at SLIIT, and ship my own commercial software through SUNDEVS. Most of my work serves clients across Japan, from car-marketplace platforms to AI-driven sales tooling. I care about systems that are fast, dependable, and genuinely useful.
+
+─── WORK EXPERIENCE ────────────────────────────────────────────────────────
+Software Engineer @ SoftSora, Nugegoda, Sri Lanka  [Dec 2025 to Present]
+  • Lead a team of software developers and QA engineers, owning planning and delivery.
+  • Full-stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot and .NET.
+  • Own software testing, project management, documentation, and stakeholder collaboration.
+  • Run DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.
+  • Drive AI-assisted automation and internal tooling for client sales workflows.
+  Tags: Team Lead, Spring Boot, .NET, React / Next.js, AWS, DevOps
+
+Junior Software Engineer @ SoftSora, Colombo, Sri Lanka  [Dec 2024 to Dec 2025]
+  • Designed and built features for the car-marketplace project using Spring Framework and .NET.
+  • Worked directly with the Japanese client on requirements, documentation, and delivery.
+  • Handled software project management and customer collaboration.
+  Tags: Spring Framework, .NET, Client Collaboration
+
+Software Engineer Intern @ SoftSora, Colombo, Sri Lanka  [Jun 2024 to Dec 2024]
+  • Built secure merchant-registration APIs for the car-marketplace project.
+  • Enabled system access for 1,000+ merchants.
+  Tags: Java, Secure APIs, Cross-functional
+
+Founder & Developer @ SUNDEVS, Sri Lanka  [Apr 2023 to Present]
+  • Founded and run SUNDEVS, building and selling commercial developer tools.
+  • 500+ copies sold across commercial developer tools.
+  Tags: Founder, Java, Spring Boot, Vaadin, Product
+
+Plugin Developer @ Summit Realms, Remote  [Oct 2023 to Feb 2024]
+  • Built custom server-side addons and an event-management system for Spigot servers.
+  Tags: Java, Bukkit / Spigot, Event Systems
+
+─── PROJECTS ───────────────────────────────────────────────────────────────
+▸ Car Marketplace Buyer Registration Platform  [2024 · SoftSora · Client: a Japanese car marketplace (Osaka, Japan)]
+  Replaced a manual Excel/email buyer-registration process for a Japanese car-marketplace with a self-service web platform: registration, car-matching preferences, a personal dashboard, and match notifications.
+  → 1,000+ buyers onboarded.
+  Problem:
+    - The client runs a car bulk-appraisal service connecting vehicle sellers with buyers across Japan.
+    - Buyer registration was handled entirely by hand with Excel sheets and email.
+    - Slow, error-prone, and not scalable as the buyer base grew.
+  Solution:
+    - Built a web app to automate and streamline buyer onboarding.
+    - User registration with personal and contact details.
+    - Car-matching condition registration (make, model, year, price range).
+    - Personalized dashboard to view preferences, track seller interactions, and manage the account.
+    - Automated notifications about new listings matching a buyer's criteria.
+  Result:
+    - 1,000+ buyers registered and onboarded on the platform.
+    - Replaced manual Excel and email work with a self-service flow.
+    - Ongoing project with continuous improvements.
+  Stack: Java, Spring Boot, React, AWS EC2, RDS / PostgreSQL, CloudFront, AWS SNS, AWS SES
+
+▸ Car Marketplace Vehicle Data Platform  [2024 · SoftSora · Client: a Japanese car marketplace]
+  Re-architected a static, hard-to-update vehicle dataset into a dynamic model on S3 + CloudFront with an EC2 microservice, while keeping the pre-loaded speed.
+  → Publishing time cut from days to hours; sub-1ms reads.
+  Problem:
+    - The existing system used static JSON files embedded directly in the frontend.
+    - Adding or updating vehicle data required manual code changes.
+    - Publishing new data took 1 to 2 days.
+  Solution:
+    - Introduced a dynamic vehicle-data model using JSON files on S3 served via CloudFront.
+    - A separate microservice on EC2 to create, update, and remove vehicle data.
+    - Kept the static, pre-loaded delivery model so reads stay extremely fast.
+  Result:
+    - Cut data publishing time from 1 to 2 days down to a few hours.
+    - Sub-1ms data access after initial load, faster than typical API-based systems.
+    - More scalable and far easier to maintain.
+  Stack: AWS S3, CloudFront, AWS EC2, Microservices, JSON
+
+▸ AI-Powered Sales Proposal Engine  [2026 · SoftSora · Client: a marketing agency, Japan]
+  An engine that reads a client's own records plus dozens of public signals and generates timely, context-aware proposals tuned to the local Japanese market and industry.
+  → Hour-long research reduced to seconds, consistently.
+  Problem:
+    - The sales team manually researched every prospect (site speed, reviews, social media, renewal timing) before pitching.
+    - Slow, inconsistent, and dependent on whoever was working; good leads went cold.
+    - No single place combining known customer data with real-world signals.
+  Solution:
+    - Built an AI engine that researches and reasons, then hands over a ready-to-use proposal.
+    - Reads the client's own records (contracts, plans, payment history) to spot renewal windows, service gaps, and consolidation opportunities.
+    - Reads public signals (slow or insecure sites, stale footers, quiet social accounts, recurring review complaints, competitor ranking, hiring, seasonal timing) into plain-language insights.
+    - Tunes each suggestion to the local context and industry language.
+  Result:
+    - Hour-long research now happens in seconds, the same way every time.
+    - Consistent proposal quality regardless of who is at the desk.
+    - Renewal windows and openings surfaced automatically instead of missed.
+  Stack: AI / Decision Layer, Data Integration, Public-Signal Analysis, FileMaker
+
+▸ CRM Unification & AI Enrichment  [2026 · SoftSora · Client: a B2B marketing agency (Japan)]
+  Merged three disconnected contact sources into one CRM, enriched ~6,000 bare records, and normalized 79 job-title variations to auto-sort decision-makers.
+  → 3,000+ decision-makers identified from ~6,700 contacts.
+  Problem:
+    - Contacts were split across three tools (CRM, a business-card app, Excel) and never joined up.
+    - Thousands of older records lacked business details; no way to tell decision-makers from junior staff.
+    - The job-title field was a mess: one role written 79 different ways.
+  Solution:
+    - Built one unified pipeline so business-card contacts import the same clean way as event contacts, with duplicates merged by email.
+    - Full clean-up and enrichment, auto-filling missing details (website, company info) across ~6,000 contacts.
+    - Normalized 79 title variations into standard categories and auto-sorted decision-makers vs. others.
+  Result:
+    - One source of truth across all channels.
+    - 3,000+ genuine decision-makers cleanly identified out of ~6,700 contacts.
+    - Targeting in seconds; ~6,000 records enriched and normalized at scale.
+  Stack: Zoho CRM, Google Sheets, n8n, Gemini API
+
+▸ HAG: Human Approval Gateway  [2026 · SoftSora]
+  A self-hosted gateway between systems that need approval and the people who give it. Posts interactive Approve/Reject messages to Slack, applies a rule, and notifies the source system.
+  → Approvals from minutes to seconds; fully audited.
+  Problem:
+    - Getting human approval for sensitive operations (production deploys, high-value transactions) was a bottleneck.
+    - Approvals were lost across emails, Slack, and ticketing systems: fragmented, slow, error-prone.
+  Solution:
+    - Built HAG, a self-hosted gateway between systems that need approval and the people who give it.
+    - Listens for requests from any system, posts interactive Approve/Reject messages to Slack, applies a rule (first-response-wins or all-must-agree), and notifies the originating system.
+    - Works with anything that can make an HTTP request.
+  Result:
+    - Approvals go from minutes (hunting people down) to seconds.
+    - Every decision logged, audited, and visible; no more lost or missed approvals.
+  Stack: Java, Slack, Webhooks / HTTP, Self-Hosted
+
+▸ OPProtector  [2023 · SunDevs]  https://github.com/ka0un/OPProtector
+  A real-time security plugin that monitors Minecraft operator accounts for compromise and unauthorized access, alerting admins before damage is done.
+  → 19,000+ servers protected · 75+ GitHub stars.
+  Problem:
+    - Minecraft server admins faced unauthorized access to operator accounts; a single compromise grants full server control.
+    - No automated way to detect operator abuse; admins relied on manual log parsing and reactive responses.
+  Solution:
+    - A security plugin that scans and monitors operator accounts in real time.
+    - Continuous monitoring, automated detection of blacklisted permissions and unauthorized patterns, real-time admin alerts, and early preventive action.
+  Result:
+    - 19,000+ servers protected (and counting); adopted across thousands of servers.
+    - 75+ GitHub stars; zero false positives via intelligent detection; immediate threat response.
+  Stack: Java, Bukkit / Spigot, Security
+
+▸ Sales Research Pipeline  [2025 · SoftSora]
+  One click after an appointment is confirmed generates a full research pack (company, website, and Google Maps audit), filed and delivered before the meeting.
+  Problem:
+    - Before every sales meeting, reps manually researched each prospect: company, online presence, Google Maps profile, background.
+    - Doing this by hand was slow, inconsistent, and often skipped when busy.
+  Solution:
+    - Built an automated pipeline triggered the moment an appointment is confirmed.
+    - Researches the company and market, analyses the website, and audits the Google Maps presence.
+    - Generates three ready-to-read reports, files them, and notifies the sales team.
+  Result:
+    - Reps walk into every meeting fully prepared with zero extra effort.
+    - Research that took time per prospect now happens instantly and consistently.
+    - Handles large batches at once and self-corrects on errors.
+  Stack: Workflow Automation, Web Analysis, Google Maps, Report Generation
+
+▸ Hidden Sales Leads on Autopilot  [2026 · SoftSora · Client: Japanese enterprise]
+  A daily engine that scrapes job sites, normalizes messy Japanese company names, dedupes against the client DB, and files genuinely new leads automatically.
+  Problem:
+    - A sales team relied on a large internal company database to find new business.
+    - Someone manually visited job sites, copied company names, and checked each against the database.
+    - Japanese company names vary widely (abbreviations, spellings), making matching hard; an earlier automation attempt hit tool time-limits.
+  Solution:
+    - Built a daily automated system that visits major job sites, gathers company names, and normalizes spelling variations into one entity.
+    - Checks each company against the internal database; genuinely new ones are added as fresh leads with a summary to the team.
+    - Delivered in two stages: a reviewable spreadsheet first to build trust, then full integration into the client's tools.
+  Result:
+    - Moved from a fragile, person-dependent routine to a dependable daily lead engine.
+    - More thorough coverage; the messy company-name problem handled automatically.
+    - Designed to grow; new sources can be added without a rebuild.
+  Stack: n8n, API Integration, Data Matching
+
+▸ Weekly Deal Summaries  [2026 · SoftSora · Client: Japan-based enterprise]
+  Every Monday, deals closing that week are pulled from HubSpot and posted to Google Chat — full automation despite a no-automation HubSpot plan.
+  Problem:
+    - All deal data lived in HubSpot, but their plan had no automation features.
+    - Staying on top of closing deals meant logging in and pulling numbers by hand every week.
+    - Data lived in HubSpot while the team communicated in Google Chat, with no bridge between them.
+  Solution:
+    - Built an automated weekly digest connecting HubSpot and Google Chat.
+    - Every Monday 9:00 AM it finds deals closing that week and posts a tidy summary (name, stage, amount, close date) into the team's Google Chat space.
+    - Used a separate automation platform as the bridge, no HubSpot upgrade needed; prototyped first, then moved to production.
+  Result:
+    - The team starts each week knowing exactly where to focus, with zero manual effort.
+    - Fewer missed deals; a manual chore became fully hands-off.
+  Stack: HubSpot, Google Chat, n8n
+
+▸ SunDevs Dashboard  [2026 · SunDevs]  https://dashboard.sundevs.net
+  A unified customer platform (licenses, servers, requests, scheduling, and a 20-state support chatbot) that shifted support from reactive to 24/7 self-service.
+  Problem:
+    - SunDevs customers had no centralized way to manage assets, track service requests, or get support.
+    - Support teams were overwhelmed with repetitive questions; the experience was fragmented across systems.
+  Solution:
+    - Built a unified, web-based customer management platform: a single source of truth.
+    - Real-time dashboard for licenses, servers, and requests with interactive charts and light/dark themes.
+    - Self-service asset management: licenses, server monitoring, service requests, and call scheduling.
+    - Selection-based support chatbot (no typing) for purchases, docs, requests, and scheduling, with anti-duplicate and rate-limit safeguards.
+    - Role-based access (Customer/Admin), Discord OAuth2, audit logging, and email verification.
+  Result:
+    - Shifted customer experience from reactive (waiting for support) to proactive (24/7 self-service).
+    - Dramatically reduced support workload; scales without proportional staffing.
+    - 2,857+ lines of documentation; chatbot state machine with 20+ states and 11 conversation flows.
+  Stack: Java 17, Spring Boot 3.5, Spring Security, Vaadin Flow, TypeScript, MongoDB, WebSocket
+
+▸ Discord Leaderboards  [2023 · SunDevs]  https://github.com/ka0un/DiscordLeaderboards
+  Live Minecraft leaderboards in Discord via PlaceholderAPI & webhooks. First commercial product and the foundation for starting SunDevs.
+  → 40+ GitHub stars. Adopted across hundreds of servers.
+  Problem:
+    - Server owners wanted to showcase top players in their Discord communities in real time.
+    - No simple way to extract leaderboard data and display it in Discord without custom integrations.
+  Solution:
+    - A lightweight plugin connecting Minecraft server data directly to Discord.
+    - Pulls rankings via PlaceholderAPI, posts via webhooks or DiscordSRV slash commands, updates on schedule, and supports unlimited custom leaderboards across MC 1.8.8 to 1.19.4.
+  Result:
+    - Adopted across hundreds of servers and thousands of players.
+    - 40+ GitHub stars; released on SpigotMC, BuiltByBit, and PolyMart; open-source (MIT) with a premium version.
+    - My first commercial product, and the foundation for starting SunDevs.
+  Stack: Java, Bukkit / Spigot, PlaceholderAPI, DiscordSRV, Webhooks
+
+▸ SummitEvents  [2023 · Summit Realms]
+  A config-driven event system for Minecraft servers: live leaderboards, boss-bar HUD, and automated rewards for timed competitive events.
+  Problem:
+    - Server admins needed to run time-limited competitive events (mining/farming challenges) but coordinating them manually was tedious and error-prone.
+    - No straightforward way to launch scheduled events, track rankings live, auto-reward winners, or show progress and time.
+  Solution:
+    - Built a comprehensive event management plugin with event creation and configuration.
+    - Real-time leaderboards, automated broadcast messaging, and a boss-bar HUD (score, position, time remaining).
+    - Automated reward commands and flexible event types (block breaking, farming) with customizable materials.
+  Result:
+    - Made events easy to organize and more engaging with live progress tracking and automated recognition.
+    - Config-driven design let the client launch diverse event types without code changes.
+  Stack: Java, Bukkit / Spigot, YAML Config, Async Scheduling
+
+─── PRODUCTS (SUNDEVS · store.sundevs.net) ─────────────────────────────────
+▸ SunLicense [License Management]  https://store.sundevs.net/l/sunlicense
+  Create, validate, and control software license keys, with a Java API, Discord bot, and docs.
+▸ SunGuard [Code Obfuscation]  https://store.sundevs.net/l/sunguard
+  Wraps ProGuard & yGuard to make Java code unreadable, from one simple dashboard.
+▸ SunPaste [Text Sharing]  https://store.sundevs.net/l/sunpaste
+  Self-hosted paste sharing with access controls, a REST API, and an admin panel.
+▸ SunLinks [Link Shortener]  https://store.sundevs.net/l/sunlinks
+  Self-hostable URL shortener with your own domain, click tracking, and analytics.
+
+─── SKILLS ─────────────────────────────────────────────────────────────────
+Languages:  Java, C#, JavaScript, TypeScript
+Backend:    Spring Boot, ASP.NET, NestJS, Hibernate, Thymeleaf
+Databases:  MySQL, MongoDB, Redis, Oracle DB
+Cloud/Ops:  AWS, Oracle Cloud, Docker, Kubernetes, Kafka, Nginx
+AI/Auto:    Claude AI, Gemini, n8n, Selenium
+Tools:      Git, GitHub, HubSpot, Zoho CRM
+
+─── EDUCATION ──────────────────────────────────────────────────────────────
+▸ SLIIT (Sri Lanka Institute of Information Technology) — BSc (Hons) Information Technology, Software Engineering  [Aug 2023 to Jul 2027]  (https://www.sliit.lk)
+▸ SLIIT (Sri Lanka Institute of Information Technology) — Higher Diploma in Information Technology  [Aug 2023 to Jul 2025]
+▸ Nalanda College, Colombo  [2020 to 2023]  (https://www.nalandacollege.lk)
+▸ Carey College, Colombo 08  [2009 to 2020]  (https://www.careycollege.lk)
+
+─── CERTIFICATIONS ─────────────────────────────────────────────────────────
+▸ Oracle Certified Associate, Java (Oracle)
+  Verify: https://catalog-education.oracle.com/ords/certview/sharebadge?id=DB2B9B81F39ADD3B975B1DC33C8CC3F5B9597B75F563EC1816539DB3AD980EB2
+▸ OCI Certified Foundations Associate (Oracle)
+  Verify: https://catalog-education.oracle.com/ords/certview/sharebadge?id=9A0A1BF53722B80017C3B92E76871C82F0534FD07613DC90C6A82A8E052DBE3A
+▸ OCI Certified AI Foundations Associate (Oracle)
+  Verify: https://catalog-education.oracle.com/ords/certview/sharebadge?id=05A77EA2079F47E065129ABDE670150E05BEA3106D3AC38E2FC2C28F5E531B41
+
+─── AWARDS ─────────────────────────────────────────────────────────────────
+▸ SLIIT Dean's List Award — Year 1 Semester 2 (SLIIT)
+▸ SLIIT Dean's List Award — Year 2 Semester 2 (SLIIT)-
