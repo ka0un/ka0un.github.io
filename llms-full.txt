@@ -9,7 +9,7 @@ Kasun Hapangama is a Software Engineer with 3+ years of experience building secu
 ## Identity & contact
 
 - Full name: Kasun Hapangama
-- Title: Software Engineer (Team Lead) at SoftSora
+- Title: Software Developer at SoftSora; Founder & Team Lead at SUNDEVS
 - Location: Malabe, Western Province, Sri Lanka
 - Email: kasun@hapangama.com
 - Phone: +94 76 637 0705
@@ -24,14 +24,13 @@ Software engineer focused on systems that are fast, dependable, and genuinely us
 
 ## Experience
 
-### Software Engineer — SoftSora (Nugegoda) · Dec 2025 to Present
-- Leads a team of software developers and QA engineers, owning planning and delivery.
+### Software Developer — SoftSora (Nugegoda) · Dec 2025 to Present
 - Full-stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot, and .NET.
 - Owns software testing, project management, documentation, and stakeholder collaboration.
 - Runs DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.
 - Drives AI-assisted automation and internal tooling for client sales workflows.
 
-### Junior Software Engineer — SoftSora (Colombo) · Dec 2024 to Dec 2025
+### Software Developer — SoftSora (Colombo) · Dec 2024 to Dec 2025
 - Designed and built features for the car-marketplace project using Spring Framework and .NET.
 - Worked directly with the Japanese client on requirements, documentation, and delivery.
 - Handled software project management and customer collaboration.
@@ -42,7 +41,8 @@ Software engineer focused on systems that are fast, dependable, and genuinely us
 
 ### Founder & Developer — SUNDEVS · Apr 2023 to Present
 - Founded and runs SUNDEVS, building and selling commercial developer tools.
-- 500+ copies sold and over LKR 2M in revenue generated.
+- Leads a software engineering team to build their products.
+- 500+ copies sold across commercial developer tools.
 
 ### Plugin Developer — Summit Realms · Oct 2023 to Feb 2024
 - Built custom server-side addons and an event-management system for Spigot servers.
