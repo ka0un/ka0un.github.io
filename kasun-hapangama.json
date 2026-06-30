@@ -23,7 +23,7 @@
     "yearsExperience": "3+",
     "projectsCompleted": "40+",
     "headline": "I build secure APIs and enterprise systems in Java & .NET for clients across Japan, and lead the engineering team at SUNDEVS.",
-    "about": "I'm a software developer with 3+ years building secure APIs and enterprise web applications. I lead a software engineering team at SUNDEVS to build our products, study Software Engineering at SLIIT, and contract through SoftSora for clients across Japan. Most of my work serves clients across Japan, from car-marketplace platforms to AI-driven sales tooling. I care about systems that are fast, dependable, and genuinely useful."
+    "about": "I'm a software developer with 3+ years building secure APIs and enterprise systems in Java and .NET. I founded SUNDEVS and lead the engineering team shipping our commercial products, and contract through SoftSora for clients across Japan. Currently studying Software Engineering at SLIIT. I care about systems that are fast, dependable, and genuinely useful."
   },
 
   "experience": [
@@ -43,7 +43,7 @@
     {
       "company": "SoftSora",
       "location": "Colombo, Sri Lanka",
-      "role": "Software Developer",
+      "role": "Junior Software Engineer",
       "period": "Dec 2024 to Dec 2025",
       "responsibilities": [
         "Designed and built features for the car-marketplace project using Spring Framework and .NET.",

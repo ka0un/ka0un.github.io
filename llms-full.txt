@@ -4,7 +4,7 @@
 
 ## Summary
 
-Kasun Hapangama is a Software Engineer with 3+ years of experience building secure APIs and enterprise web applications in Java and .NET. He leads a software development and QA team at SoftSora, where most of his work serves clients across Japan — from car-marketplace platforms to AI-driven sales tooling. He studies Software Engineering at SLIIT and ships his own commercial developer tools through SUNDEVS, a venture he founded. He has completed 30+ projects to date.
+Kasun Hapangama is a Software Engineer with 3+ years of experience building secure APIs and enterprise web applications in Java and .NET. He leads a software engineering team at SUNDEVS, contracts through SoftSora for clients across Japan — from car-marketplace platforms to AI-driven sales tooling — and studies Software Engineering at SLIIT. He has completed 40+ projects to date.
 
 ## Identity & contact
 
@@ -20,7 +20,7 @@ Kasun Hapangama is a Software Engineer with 3+ years of experience building secu
 
 ## About
 
-Software engineer focused on systems that are fast, dependable, and genuinely useful. Leads a development and QA team at SoftSora, studies Software Engineering at SLIIT, and builds and sells commercial software through SUNDEVS. Most work serves clients across Japan, spanning car-marketplace platforms and AI-driven sales tooling.
+Software engineer building secure APIs and enterprise systems in Java and .NET. Founded SUNDEVS and leads the engineering team shipping their commercial products, while contracting through SoftSora for clients across Japan. Currently studying Software Engineering at SLIIT.
 
 ## Experience
 
@@ -30,7 +30,7 @@ Software engineer focused on systems that are fast, dependable, and genuinely us
 - Runs DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.
 - Drives AI-assisted automation and internal tooling for client sales workflows.
 
-### Software Developer — SoftSora (Colombo) · Dec 2024 to Dec 2025
+### Junior Software Engineer — SoftSora (Colombo) · Dec 2024 to Dec 2025
 - Designed and built features for the car-marketplace project using Spring Framework and .NET.
 - Worked directly with the Japanese client on requirements, documentation, and delivery.
 - Handled software project management and customer collaboration.
