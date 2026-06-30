@@ -32,12 +32,12 @@ Software engineer focused on systems that are fast, dependable, and genuinely us
 - Drives AI-assisted automation and internal tooling for client sales workflows.
 
 ### Junior Software Engineer — SoftSora (Colombo) · Dec 2024 to Dec 2025
-- Designed and built features for the CTN car-marketplace project using Spring Framework and .NET.
+- Designed and built features for the car-marketplace project using Spring Framework and .NET.
 - Worked directly with the Japanese client on requirements, documentation, and delivery.
 - Handled software project management and customer collaboration.
 
 ### Software Engineer Intern — SoftSora (Colombo) · Jun 2024 to Dec 2024
-- Built secure merchant-registration APIs for the CTN project.
+- Built secure merchant-registration APIs for the car-marketplace project.
 - Enabled system access for 1,000+ merchants.
 
 ### Founder & Developer — SUNDEVS · Apr 2023 to Present
@@ -79,13 +79,13 @@ Software engineer focused on systems that are fast, dependable, and genuinely us
 
 ## Projects (case studies)
 
-### CTN Buyer Registration Platform (2024 · SoftSora · Client: CTN Co., Ltd., Osaka, Japan)
-- Problem: CTN runs a car bulk-appraisal service connecting sellers with buyers across Japan. Buyer registration was handled by hand with Excel and email — slow, error-prone, and not scalable.
+### Car Marketplace Buyer Registration Platform (2024 · SoftSora · Client: a Japanese car marketplace, Osaka, Japan)
+- Problem: The client runs a car bulk-appraisal service connecting sellers with buyers across Japan. Buyer registration was handled by hand with Excel and email — slow, error-prone, and not scalable.
 - Solution: A web app automating buyer onboarding — registration with contact details, car-matching condition registration (make, model, year, price range), a personalized dashboard, and automated notifications about matching listings.
 - Result: 1,000+ buyers registered and onboarded; replaced manual Excel/email work with self-service; ongoing project with continuous improvements.
 - Tech: Java, Spring Boot, React, AWS EC2, RDS/PostgreSQL, CloudFront, AWS SNS, AWS SES.
 
-### CTN Dynamic Vehicle Data Platform (2024 · SoftSora · Client: CTN Co., Ltd.)
+### Car Marketplace Vehicle Data Platform (2024 · SoftSora · Client: a Japanese car marketplace)
 - Problem: The existing system used static JSON files embedded in the frontend; updates required code changes and publishing took 1–2 days.
 - Solution: A dynamic vehicle-data model using JSON on S3 served via CloudFront, plus a separate EC2 microservice to create/update/remove data, keeping the fast pre-loaded delivery model.
 - Result: Cut publishing time from 1–2 days to a few hours; sub-1ms data access after initial load; far more scalable and maintainable.
@@ -97,7 +97,7 @@ Software engineer focused on systems that are fast, dependable, and genuinely us
 - Result: Hour-long research now happens in seconds, consistently; proposal quality is uniform regardless of who is working; renewal windows surfaced automatically.
 - Tech: AI/decision layer, data integration, public-signal analysis, FileMaker.
 
-### CRM Unification & AI Enrichment (2026 · SoftSora · Client: KOBUSHI Marketing, B2B, Japan)
+### CRM Unification & AI Enrichment (2026 · SoftSora · Client: a B2B marketing agency, B2B, Japan)
 - Problem: Contacts were split across three tools (CRM, a business-card app, Excel) and never joined; thousands of records lacked detail; the job-title field had one role written 79 different ways.
 - Solution: One unified import pipeline with email-based de-duplication; full clean-up and enrichment auto-filling missing details across ~6,000 contacts; normalized 79 title variations and auto-sorted decision-makers.
 - Result: One source of truth; 3,000+ genuine decision-makers identified out of ~6,700 contacts; enrichment of ~6,000 records engineered to cost only a few dollars to run.

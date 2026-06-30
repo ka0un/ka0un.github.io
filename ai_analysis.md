@@ -54,7 +54,7 @@ AI answer engines reward content that is **self-contained, factual, and structur
 
 ## Post-deploy checklist (owner)
 
-1. **Test retrieval:** ask ChatGPT (with browsing), Perplexity, and Gemini *"Who is Kasun Hapangama?"* and *"What did Kasun Hapangama build for CTN?"* after deploy; confirm the new facts surface.
+1. **Test retrieval:** ask ChatGPT (with browsing), Perplexity, and Gemini *"Who is Kasun Hapangama?"* and *"What did Kasun Hapangama build for this car marketplace client?"* after deploy; confirm the new facts surface.
 2. **Validate structured data:** Google Rich Results Test + Schema.org Validator on the live URL.
 3. **Confirm crawler access:** check server logs for `GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended` hits; ensure no CDN/WAF rule blocks them.
 4. **Keep `llms-full.txt` in sync** whenever projects or roles change — it's the canonical AI-facing copy.

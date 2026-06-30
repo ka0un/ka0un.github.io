@@ -1,11 +1,11 @@
-# CTN Buyer Registration Project - 2024 Jun (CTN)
+# Car Marketplace Buyer Registration Project - 2024 Jun
 
-CTN (ctn-net.jp) is a Japanese company called 株式会社CTN (CTN Co., Ltd.), based in Osaka, Japan. The company primarily operates in the automotive industry and provides services for car dealerships, vehicle sourcing, vehicle sales support, car valuation platforms, and digital marketing.
-CTN車一括査定 (CTN Car Bulk Appraisal), a service that connects car sellers with vehicle buyers across Japan.
+The client is a Japanese car marketplace company, based in Osaka, Japan. The company primarily operates in the automotive industry and provides services for car dealerships, vehicle sourcing, vehicle sales support, car valuation platforms, and digital marketing.
+The client operates a car bulk-appraisal service that connects car sellers with vehicle buyers across Japan.
 
-Previosuly all tasks related to buyer registration done by manually with excel sheets and email communication. The CTN Buyer Registration Project was initiated to automate and streamline the buyer registration process, making it more efficient and user-friendly for both buyers and CTN staff.
+Previosuly all tasks related to buyer registration done by manually with excel sheets and email communication. This project was initiated to automate and streamline the buyer registration process, making it more efficient and user-friendly for both buyers and client staff.
 
-The CTN Buyer Registration Project is a web-based application designed to facilitate the registration process for buyers interested in purchasing vehicles through the CTN Car Bulk Appraisal service. The project aims to create a user-friendly interface that allows buyers to easily sign up, provide necessary information, and access the services offered by CTN.
+The project is a web-based application designed to facilitate the registration process for buyers interested in purchasing vehicles through the car bulk-appraisal service. The project aims to create a user-friendly interface that allows buyers to easily sign up, provide necessary information, and access the services offered by the client.
 
 
 
@@ -15,7 +15,7 @@ Key Features:
 3. Dashboard: Once registered, buyers can access a personalized dashboard where they can view their registered preferences, track their interactions with sellers, and manage their account settings.
 4. Notifications: The system can send notifications to buyers about new vehicle listings that match their registered
 
-There are aorund 1000 buyers registered on the platform, and the project is ongoing with continuous improvements and updates to enhance the user experience and expand the services offered by CTN.
+There are aorund 1000 buyers registered on the platform, and the project is ongoing with continuous improvements and updates to enhance the user experience and expand the services offered by the client.
 
 We have utilized java springboot backend with react frontned aws ec2 rds for postguresql database and cloudfornt for cdn. also use aws sns for notifications and ses for notifications
 
@@ -24,20 +24,20 @@ Associated with SoftSora
 
 --------------
 
-# CTN Vehicle Data Project - 2024 Oct (CTN)
+# Car Marketplace Vehicle Data Project - 2024 Oct
 
 The existing system that used by ctn is based on static json files embeded directly in their frontend make it diffuclt to add new vehicle data to the system
 
 we have introduced a new dynamic vehicle data model that untilized json files on s3 and cloudfront and seperate microservice running on ec2 for manupilate vehicle data
 
 Key Features:
-1. Dynamic Vehicle Data: The new system allows for dynamic management of vehicle data, enabling CTN staff to easily add, update, and remove vehicle information without the need for manual updates.
+1. Dynamic Vehicle Data: The new system allows for dynamic management of vehicle data, enabling client staff to easily add, update, and remove vehicle information without the need for manual updates.
 2. S3 and CloudFront Integration: Vehicle data is stored in Amazon S3, and CloudFront is used to deliver the data efficiently to users across Japan, ensuring fast load times and a seamless user experience.
 3. Microservice Architecture: A separate microservice running on AWS EC2 is responsible for handling
 4. Faster data publishment and reflection
 
 
-As a results we were able to reduce the time taken to publish new vehicle data from 1-2 days to just a few hours, and the system is now more scalable and easier to maintain. The project is ongoing with continuous improvements and updates to enhance the user experience and expand the services offered by CTN.
+As a results we were able to reduce the time taken to publish new vehicle data from 1-2 days to just a few hours, and the system is now more scalable and easier to maintain. The project is ongoing with continuous improvements and updates to enhance the user experience and expand the services offered by the client.
 
 While mintaing the static and fast preloading nature of the system so users can acces data within 1ms (after the initl load time) making it comparitivly faster than api based systems|
 
@@ -247,7 +247,7 @@ Associated with SoftSora
 
 # Turning Scattered Contacts Into One Smart Customer Database (2026 May) (ZOHO CRM)
 
-**Client:** KOBUSHI Marketing — a Japan-based B2B marketing company
+**Client:** a B2B marketing agency — a Japan-based B2B marketing company
 **Project:** CRM unification & AI data enrichment (Phase 1)
 **Platform:** Zoho CRM · Google Sheets · n8n · Gemini API
 
@@ -255,13 +255,13 @@ Associated with SoftSora
 
 ## Overview
 
-KOBUSHI Marketing collects business contacts in two ways: people who sign up for their events, and people they meet face-to-face and exchange business cards with. For years, those contacts lived in completely separate places and were never properly joined up. We built the system that finally brought everything together — clean, unified, and automatically organized — so the team could run smarter outreach with far less manual work.
+a B2B marketing agency collects business contacts in two ways: people who sign up for their events, and people they meet face-to-face and exchange business cards with. For years, those contacts lived in completely separate places and were never properly joined up. We built the system that finally brought everything together — clean, unified, and automatically organized — so the team could run smarter outreach with far less manual work.
 
 ---
 
 ## The Challenge
 
-Before this project, KOBUSHI's customer data was a patchwork held together by hand.
+Before this project, the client's customer data was a patchwork held together by hand.
 
 Their contacts were split across three different tools — their CRM, a business-card app, and a pile of Excel files. Because nothing was connected, the same person could show up in one place but be missing from another, and the team's email campaigns often reached an inconsistent, incomplete set of people.
 
@@ -299,7 +299,7 @@ We delivered exactly what they were missing — a single, organized, self-mainta
 
 The win here wasn't a flashy new tool — it was understanding the client's everyday reality and building precisely around it. We took three tangled data sources, a thousand inconsistencies, and a process that depended on manual effort, and turned them into one tidy system that mostly looks after itself.
 
-KOBUSHI Marketing went from "we have the contacts somewhere" to "we know exactly who our decision-makers are, and we can reach them with one click." That's the difference between owning data and being able to use it.
+a B2B marketing agency went from "we have the contacts somewhere" to "we know exactly who our decision-makers are, and we can reach them with one click." That's the difference between owning data and being able to use it.
 
 Associated with SoftSora
 

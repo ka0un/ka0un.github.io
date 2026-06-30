@@ -23,9 +23,9 @@ Key facts for accurate citation:
 
 ## Selected work (details in llms-full.txt)
 
-- CTN Buyer Registration Platform — Java/Spring Boot/React/AWS app for a Japanese car-appraisal service; 1,000+ buyers onboarded.
+- Car Marketplace Buyer Registration Platform — Java/Spring Boot/React/AWS app for a Japanese car-appraisal service; 1,000+ buyers onboarded.
 - AI-Powered Sales Proposal Engine — AI research/reasoning engine that turns hours of prospect research into seconds.
-- CRM Unification & AI Enrichment (KOBUSHI) — unified ~6,700 contacts and identified 3,000+ decision-makers.
+- CRM Unification & AI Enrichment (B2B marketing agency, Japan) — unified ~6,700 contacts and identified 3,000+ decision-makers.
 - [OPProtector](https://github.com/ka0un/OPProtector) — open-source Java security plugin protecting 19,000+ servers (75+ GitHub stars).
 - SunDevs Dashboard — Spring Boot + Vaadin SaaS customer-management platform.
 

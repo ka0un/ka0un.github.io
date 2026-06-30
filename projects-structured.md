@@ -9,10 +9,10 @@ and as full projects (Products group below).
 
 ## CLIENT WORK (SoftSora)
 
-### 1. CTN Buyer Registration Platform
-- **Year:** 2024 (June) · SoftSora · Client: CTN Co., Ltd. (Osaka, Japan)
+### 1. Car Marketplace Buyer Registration Platform
+- **Year:** 2024 (June) · SoftSora · Client: a Japanese car marketplace (Osaka, Japan)
 - **Background & problem:**
-  - CTN runs a car bulk-appraisal service connecting vehicle sellers with buyers across Japan.
+  - The client runs a car bulk-appraisal service connecting vehicle sellers with buyers across Japan.
   - Buyer registration was handled entirely by hand with Excel sheets and email.
   - Slow, error-prone, and not scalable as the buyer base grew.
 - **Solution:**
@@ -28,8 +28,8 @@ and as full projects (Products group below).
 - **Technologies:** Java, Spring Boot, React, AWS EC2, AWS RDS (PostgreSQL), CloudFront (CDN), AWS SNS, AWS SES
 - **Tags:** Full-Stack, Backend, AWS, Web Application, Automation
 
-### 2. CTN Dynamic Vehicle Data Platform
-- **Year:** 2024 (October) · SoftSora · Client: CTN Co., Ltd.
+### 2. Car Marketplace Vehicle Data Platform
+- **Year:** 2024 (October) · SoftSora · Client: a Japanese car marketplace
 - **Background & problem:**
   - The existing system used static JSON files embedded directly in the frontend.
   - Adding or updating vehicle data was difficult and required manual code changes.
@@ -113,8 +113,8 @@ and as full projects (Products group below).
 - **Technologies:** HubSpot, Google Chat, n8n
 - **Tags:** Automation, CRM Integration, n8n, Workflow
 
-### 7. CRM Unification & AI Data Enrichment (KOBUSHI)
-- **Year:** 2026 (May) · SoftSora · Client: KOBUSHI Marketing (B2B, Japan)
+### 7. CRM Unification & AI Data Enrichment (B2B marketing agency, Japan)
+- **Year:** 2026 (May) · SoftSora · Client: a B2B marketing agency (Japan)
 - **Background & problem:**
   - Contacts were split across three tools: CRM, a business-card app, and Excel files - never joined up.
   - Thousands of older records lacked business details; no way to tell decision-makers from junior staff.
