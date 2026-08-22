@@ -155,7 +155,7 @@ ul.bullets li{ margin:.4mm 0; }
 
   <div class="section">
     <h2>Summary</h2>
-    <p class="summary">Software engineer with 3+ years building secure APIs and enterprise web applications in Java and .NET for clients across Japan, contracting through SoftSora. Founder of SUNDEVS, leading the engineering team that builds and sells commercial developer tools with 1,000+ copies sold. AWS Certified Solutions Architect, Associate, and Oracle Certified Associate in Java SE 8. Work spans car marketplace platforms, AI powered sales tooling, and open source security software, with 30+ projects completed. Currently studying Software Engineering at SLIIT.</p>
+    <p class="summary">Software engineer with 3+ years building secure REST APIs and enterprise web applications in Java and .NET for clients across Japan, contracting through SoftSora. Founder of SUNDEVS, leading the engineering team that builds and sells commercial developer tools with 1,000+ copies sold. AWS Certified Solutions Architect, Associate, and Oracle Certified Associate in Java SE 8. Work spans car marketplace platforms, generative-AI sales tooling, and open source security software, with 30+ projects completed. Currently studying Software Engineering at SLIIT.</p>
   </div>
 
   <div class="section">
@@ -180,9 +180,10 @@ ul.bullets li{ margin:.4mm 0; }
       <ul class="bullets">
         <li>Architect and own core systems, from technical design through production delivery.</li>
         <li>Full stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot and .NET.</li>
+        <li>Work within an Agile/Scrum process, including sprint planning and regular standups.</li>
         <li>Own software testing, project management, documentation, and stakeholder collaboration.</li>
         <li>Run DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.</li>
-        <li>Drive AI assisted automation and internal tooling for client sales workflows.</li>
+        <li>Drive automation using Claude AI, Gemini, and n8n for internal tooling and client sales workflows.</li>
       </ul>
     </div>
 
@@ -194,8 +195,8 @@ ul.bullets li{ margin:.4mm 0; }
       <div class="entry-sub">Colombo, Sri Lanka</div>
       <ul class="bullets">
         <li>Designed and built features for a car marketplace client project using Spring Framework and .NET.</li>
-        <li>Worked directly with the client on requirements, documentation, and delivery.</li>
-        <li>Handled software project management and customer collaboration.</li>
+        <li>Collaborated directly with the client on requirements gathering, documentation, and delivery.</li>
+        <li>Managed software project timelines and customer collaboration.</li>
       </ul>
     </div>
 
@@ -206,14 +207,14 @@ ul.bullets li{ margin:.4mm 0; }
       </div>
       <div class="entry-sub">Colombo, Sri Lanka</div>
       <ul class="bullets">
-        <li>Built secure merchant registration APIs for the car marketplace project.</li>
+        <li>Built REST APIs with authentication and access control for merchant registration on the car marketplace project.</li>
         <li>Enabled system access for 1,000+ merchants.</li>
       </ul>
     </div>
 
     <div class="entry">
       <div class="entry-top">
-        <div class="entry-title">SUNDEVS, Founder and Developer</div>
+        <div class="entry-title">SUNDEVS, Founder and Developer <span class="entry-link">(side venture, alongside full-time SoftSora role)</span></div>
         <div class="entry-date">Apr 2023 to Present</div>
       </div>
       <div class="entry-sub">Sri Lanka <span class="entry-link">(store.sundevs.net)</span></div>
