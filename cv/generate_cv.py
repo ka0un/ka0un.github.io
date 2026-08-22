@@ -155,7 +155,7 @@ ul.bullets li{ margin:.4mm 0; }
 
   <div class="section">
     <h2>Summary</h2>
-    <p class="summary">Software engineer with 3+ years building secure REST APIs and enterprise web applications in Java and .NET for clients across Japan, contracting through SoftSora. Founder of SUNDEVS, leading the engineering team that builds and sells commercial developer tools with 1,000+ copies sold. AWS Certified Solutions Architect, Associate, and Oracle Certified Associate in Java SE 8. Work spans car marketplace platforms, generative-AI sales tooling, and open source security software, with 30+ projects completed. Currently studying Software Engineering at SLIIT.</p>
+    <p class="summary">Software engineer with 3+ years building secure REST APIs and enterprise web applications in Java and .NET for clients across Japan, contracting through SoftSora. Founder of SUNDEVS, leading the engineering team that builds and sells commercial developer tools with 1,000+ copies sold. AWS Certified Solutions Architect, Associate, and Oracle Certified Associate in Java SE 8. Delivered 30+ projects spanning car marketplace platforms, generative-AI sales tooling, and open source security software. Currently studying Software Engineering at SLIIT.</p>
   </div>
 
   <div class="section">
@@ -165,7 +165,8 @@ ul.bullets li{ margin:.4mm 0; }
     <p class="skills-row"><b>Databases:</b> MySQL, MongoDB, Redis, Oracle DB</p>
     <p class="skills-row"><b>Cloud &amp; DevOps:</b> AWS, Oracle Cloud, Docker, Kubernetes, Kafka, Nginx</p>
     <p class="skills-row"><b>AI &amp; Automation:</b> Claude AI, Gemini, n8n, Selenium</p>
-    <p class="skills-row"><b>Tools &amp; Platforms:</b> Git, GitHub, HubSpot, Zoho CRM</p>
+    <p class="skills-row"><b>Tools &amp; Platforms:</b> Git, GitHub, HubSpot, Zoho CRM, Unit Testing</p>
+    <p class="skills-row"><b>Soft Skills:</b> Leadership, Team Management, Client Collaboration, Communication, Project Management, Stakeholder Management</p>
   </div>
 
   <div class="section">
@@ -178,12 +179,12 @@ ul.bullets li{ margin:.4mm 0; }
       </div>
       <div class="entry-sub">Nugegoda, Sri Lanka</div>
       <ul class="bullets">
-        <li>Architect and own core systems, from technical design through production delivery.</li>
+        <li>Architect and maintain core systems, from technical design through production delivery.</li>
         <li>Full stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot and .NET.</li>
         <li>Work within an Agile/Scrum process, including sprint planning and regular standups.</li>
-        <li>Own software testing, project management, documentation, and stakeholder collaboration.</li>
-        <li>Run DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.</li>
-        <li>Drive automation using Claude AI, Gemini, and n8n for internal tooling and client sales workflows.</li>
+        <li>Lead software testing, project management, documentation, and stakeholder collaboration.</li>
+        <li>Manage CI/CD pipelines and deployment monitoring on AWS and Oracle Cloud.</li>
+        <li>Build automation using Claude AI, Gemini, and n8n for internal tooling and client sales workflows.</li>
       </ul>
     </div>
 
@@ -227,7 +228,7 @@ ul.bullets li{ margin:.4mm 0; }
 
     <div class="entry">
       <div class="entry-top">
-        <div class="entry-title">Summit Realms, Plugin Developer</div>
+        <div class="entry-title">Summit Realms, Plugin Developer <span class="entry-link">(freelance, part-time)</span></div>
         <div class="entry-date">Oct 2023 to Feb 2024</div>
       </div>
       <div class="entry-sub">Remote</div>
