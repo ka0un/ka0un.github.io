@@ -3,8 +3,8 @@
     "name": "Kasun Hapangama",
     "givenName": "Kasun",
     "familyName": "Hapangama",
-    "jobTitle": "Software Developer",
-    "description": "Software Developer with 3+ years building secure APIs and enterprise web applications in Java and .NET. Contracts through SoftSora for Japanese enterprise clients, and leads a software engineering team at SUNDEVS building commercial developer tools.",
+    "jobTitle": "Software Engineer",
+    "description": "Software Engineer with 3+ years building secure APIs and enterprise web applications in Java and .NET. Contracts through SoftSora for enterprise clients, and leads a software engineering team at SUNDEVS building commercial developer tools.",
     "location": {
       "city": "Malabe",
       "region": "Western Province",
@@ -12,6 +12,7 @@
     },
     "contact": {
       "email": "kasun@hapangama.com",
+      "phone": "+94 76 637 0705",
       "website": "https://kasun.hapangama.com/",
       "resume": "https://kasun.hapangama.com/kasun-hapangama.pdf",
       "linkedin": "https://www.linkedin.com/in/kaxun/",
@@ -21,24 +22,25 @@
 
   "summary": {
     "yearsExperience": "3+",
-    "projectsCompleted": "40+",
-    "headline": "I build secure APIs and enterprise systems in Java & .NET for clients across Japan, and lead the engineering team at SUNDEVS.",
-    "about": "I'm a software developer with 3+ years building secure APIs and enterprise systems in Java and .NET. I founded SUNDEVS and lead the engineering team shipping our commercial products, and contract through SoftSora for clients across Japan. Currently studying Software Engineering at SLIIT. I care about systems that are fast, dependable, and genuinely useful."
+    "projectsCompleted": "30+",
+    "headline": "I build secure APIs and enterprise systems in Java & .NET for clients across Japan, and lead engineering at my own venture, SUNDEVS.",
+    "about": "I'm a software engineer with 3+ years building secure APIs and enterprise systems in Java and .NET. I founded SUNDEVS and lead the engineering team shipping our commercial products, and contract through SoftSora for enterprise clients. Currently studying Software Engineering at SLIIT. I care about systems that are fast, dependable, and genuinely useful."
   },
 
   "experience": [
     {
       "company": "SoftSora",
       "location": "Nugegoda, Sri Lanka",
-      "role": "Software Developer",
+      "role": "Software Engineer",
       "period": "Dec 2025 to Present",
       "responsibilities": [
+        "Architect and own core systems, from technical design through production delivery.",
         "Full-stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot and .NET.",
         "Own software testing, project management, documentation, and stakeholder collaboration.",
         "Run DevOps on AWS and Oracle Cloud, from CI/CD to deployment and monitoring.",
         "Drive AI-assisted automation and internal tooling for client sales workflows."
       ],
-      "tags": ["Spring Boot", ".NET", "React / Next.js", "AWS", "DevOps"]
+      "tags": ["Team Lead", "Spring Boot", ".NET", "React / Next.js", "AWS", "DevOps"]
     },
     {
       "company": "SoftSora",
@@ -47,7 +49,7 @@
       "period": "Dec 2024 to Dec 2025",
       "responsibilities": [
         "Designed and built features for the car-marketplace project using Spring Framework and .NET.",
-        "Worked directly with the Japanese client on requirements, documentation, and delivery.",
+        "Worked directly with the client on requirements, documentation, and delivery.",
         "Handled software project management and customer collaboration."
       ],
       "tags": ["Spring Framework", ".NET", "Client Collaboration"]
@@ -71,7 +73,7 @@
       "responsibilities": [
         "Founded and run SUNDEVS, building and selling commercial developer tools.",
         "Lead a software engineering team to build our products.",
-        "500+ copies sold across commercial developer tools."
+        "1000+ copies sold across commercial developer tools."
       ],
       "tags": ["Founder", "Team Lead", "Java", "Spring Boot", "Vaadin", "Product"]
     },
@@ -89,14 +91,14 @@
 
   "projects": [
     {
-      "id": "ctn-buyer",
-      "name": "Car Marketplace Buyer Registration Platform",
+      "id": "buyer-reg",
+      "name": "Buyer Registration Platform",
       "kicker": "Full-Stack · AWS",
-      "meta": "2024 · SoftSora · Client: a Japanese car marketplace (Osaka, Japan)",
-      "summary": "Replaced a manual Excel/email buyer-registration process for a Japanese car-marketplace with a self-service web platform: registration, car-matching preferences, a personal dashboard, and match notifications.",
+      "meta": "2024 · SoftSora · Client: Automotive marketplace platform",
+      "summary": "Replaced a manual Excel/email buyer-registration process for a car-marketplace with a self-service web platform: registration, car-matching preferences, a personal dashboard, and match notifications.",
       "highlight": "1,000+ buyers onboarded.",
       "problem": [
-        "The client runs a car bulk-appraisal service connecting vehicle sellers with buyers across Japan.",
+        "The client runs a car bulk-appraisal service connecting vehicle sellers with buyers.",
         "Buyer registration was handled entirely by hand with Excel sheets and email.",
         "Slow, error-prone, and not scalable as the buyer base grew."
       ],
@@ -115,10 +117,10 @@
       "tags": ["Java", "Spring Boot", "React", "AWS EC2", "RDS / PostgreSQL", "CloudFront", "AWS SNS", "AWS SES"]
     },
     {
-      "id": "ctn-vehicle",
-      "name": "Car Marketplace Vehicle Data Platform",
+      "id": "vehicle-data",
+      "name": "Dynamic Vehicle Data Platform",
       "kicker": "Architecture · Performance",
-      "meta": "2024 · SoftSora · Client: a Japanese car marketplace",
+      "meta": "2024 · SoftSora · Client: Automotive marketplace platform",
       "summary": "Re-architected a static, hard-to-update vehicle dataset into a dynamic model on S3 + CloudFront with an EC2 microservice, while keeping the pre-loaded speed.",
       "highlight": "Publishing time cut from days to hours; sub-1ms reads.",
       "problem": [
@@ -142,8 +144,8 @@
       "id": "ai-proposal",
       "name": "AI-Powered Sales Proposal Engine",
       "kicker": "AI · Sales Tooling",
-      "meta": "2026 · SoftSora · Client: a marketing agency, Japan",
-      "summary": "An engine that reads a client's own records plus dozens of public signals and generates timely, context-aware proposals tuned to the local Japanese market and industry.",
+      "meta": "2026 · SoftSora · Client: SMB marketing org",
+      "summary": "An engine that reads a client's own records plus dozens of public signals and generates timely, context-aware proposals tuned to the local market and industry.",
       "highlight": "Hour-long research reduced to seconds, consistently.",
       "problem": [
         "The sales team manually researched every prospect (site speed, reviews, social media, renewal timing) before pitching.",
@@ -164,10 +166,10 @@
       "tags": ["AI / Decision Layer", "Data Integration", "Public-Signal Analysis", "FileMaker"]
     },
     {
-      "id": "kobushi",
+      "id": "crm-enrichment",
       "name": "CRM Unification & AI Enrichment",
       "kicker": "Data Engineering · AI",
-      "meta": "2026 · SoftSora · Client: a B2B marketing agency (Japan)",
+      "meta": "2026 · SoftSora · Client: B2B marketing firm",
       "summary": "Merged three disconnected contact sources into one CRM, enriched ~6,000 bare records, and normalized 79 job-title variations to auto-sort decision-makers.",
       "highlight": "3,000+ decision-makers identified from ~6,700 contacts.",
       "problem": [
@@ -183,7 +185,7 @@
       "result": [
         "One source of truth across all channels.",
         "3,000+ genuine decision-makers cleanly identified out of ~6,700 contacts.",
-        "Targeting in seconds; ~6,000 records enriched and normalized at scale."
+        "Targeting in seconds; enrichment of ~6,000 records engineered to cost only a few dollars to run."
       ],
       "tags": ["Zoho CRM", "Google Sheets", "n8n", "Gemini API"]
     },
@@ -257,12 +259,12 @@
       "id": "sales-leads",
       "name": "Hidden Sales Leads on Autopilot",
       "kicker": "Automation · n8n",
-      "meta": "2026 · SoftSora · Client: Japanese enterprise",
-      "summary": "A daily engine that scrapes job sites, normalizes messy Japanese company names, dedupes against the client DB, and files genuinely new leads automatically.",
+      "meta": "2026 · SoftSora · Client: Enterprise client",
+      "summary": "A daily engine that scrapes job sites, normalizes messy company names, dedupes against the client DB, and files genuinely new leads automatically.",
       "problem": [
         "A sales team relied on a large internal company database to find new business.",
         "Someone manually visited job sites, copied company names, and checked each against the database.",
-        "Japanese company names vary widely (abbreviations, spellings), making matching hard; an earlier automation attempt hit tool time-limits."
+        "Company names vary widely (abbreviations, spellings), making matching hard; an earlier automation attempt hit tool time-limits."
       ],
       "solution": [
         "Built a daily automated system that visits major job sites, gathers company names, and normalizes spelling variations into one entity.",
@@ -280,8 +282,8 @@
       "id": "deal-summaries",
       "name": "Weekly Deal Summaries",
       "kicker": "CRM Integration",
-      "meta": "2026 · SoftSora · Client: Japan-based enterprise",
-      "summary": "Every Monday, deals closing that week are pulled from HubSpot and posted to Google Chat — full automation despite a no-automation HubSpot plan.",
+      "meta": "2026 · SoftSora · Client: Enterprise client",
+      "summary": "Every Monday, deals closing that week are pulled from HubSpot and posted to Google Chat, full automation despite a no-automation HubSpot plan.",
       "problem": [
         "All deal data lived in HubSpot, but their plan had no automation features.",
         "Staying on top of closing deals meant logging in and pulling numbers by hand every week.",
@@ -431,7 +433,12 @@
 
   "certifications": [
     {
-      "name": "Oracle Certified Associate, Java",
+      "name": "AWS Certified Solutions Architect - Associate",
+      "issuer": "Amazon Web Services",
+      "verifyUrl": "https://www.credly.com/badges/52a14006-7ffb-48a5-809f-7b1874bfa108"
+    },
+    {
+      "name": "Oracle Certified Associate, Java SE 8",
       "issuer": "Oracle",
       "verifyUrl": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=DB2B9B81F39ADD3B975B1DC33C8CC3F5B9597B75F563EC1816539DB3AD980EB2"
     },
@@ -469,7 +476,7 @@
       "name": "SUNDEVS",
       "url": "https://store.sundevs.net/",
       "description": "Kasun Hapangama's venture building and selling commercial developer tools (SunLicense, SunGuard, SunPaste, SunLinks).",
-      "copiesSold": "500+"
+      "copiesSold": "1000+"
     }
   }
 }
