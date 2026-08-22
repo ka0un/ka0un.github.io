@@ -108,6 +108,7 @@
             { "@type": "EducationalOrganization", "name": "Carey College, Colombo" }
           ],
           "hasCredential": [
+            { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "AWS Certified Solutions Architect - Associate", "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }, "url": "https://www.credly.com/badges/52a14006-7ffb-48a5-809f-7b1874bfa108" },
             { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Oracle Certified Associate, Java SE 8", "recognizedBy": { "@type": "Organization", "name": "Oracle" } },
             { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "OCI Certified Foundations Associate", "recognizedBy": { "@type": "Organization", "name": "Oracle" } },
             { "@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "OCI Certified AI Foundations Associate", "recognizedBy": { "@type": "Organization", "name": "Oracle" } }
@@ -490,7 +491,7 @@
           "name": "What certifications does Kasun Hapangama hold?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "He holds three Oracle certifications: Oracle Certified Associate, Java SE 8; OCI Certified Foundations Associate; and OCI Certified AI Foundations Associate. He also earned the SLIIT Dean's List award in Year 1 Semester 2 and Year 2 Semester 2."
+            "text": "He holds the AWS Certified Solutions Architect - Associate certification, plus three Oracle certifications: Oracle Certified Associate, Java SE 8; OCI Certified Foundations Associate; and OCI Certified AI Foundations Associate. He also earned the SLIIT Dean's List award in Year 1 Semester 2 and Year 2 Semester 2."
           }
         },
         {
@@ -751,8 +752,9 @@
     /* stat tile */
     .stat{ display:flex; flex-direction:column; justify-content:space-between; gap:14px; min-height:160px; }
     /* badge tile - shows only the transparent medallion, centered */
-    .badge-tile{ display:flex; align-items:center; justify-content:center; min-height:160px; padding:18px; }
-    .badge-tile img{ width:auto; max-width:90%; max-height:120px; }
+    .badge-tile{ display:flex; align-items:center; justify-content:center; min-height:200px; padding:10px; cursor:pointer; }
+    .badge-tile img{ width:auto; max-width:96%; max-height:180px; }
+    .badge-tile:hover{ transform:none; box-shadow:none; border-color:var(--line); }
     .stat__num{ font-family:var(--serif); font-weight:330; font-size:3rem; font-size:clamp(2.6rem,5vw,3.8rem); line-height:1; letter-spacing:-.02em; }
     .stat__txt{ font-size:.92rem; color:var(--muted); }
     .tile--dark .stat__txt, .tile--accent .stat__txt{ color:rgba(255,255,255,.82); }
@@ -1116,12 +1118,12 @@
           <p class="tile__label">Completed</p>
           <div><div class="stat__num">30+</div><div class="stat__txt">projects completed</div></div>
         </article>
-        <article class="tile tile--span3 badge-tile r d-3">
+        <a class="tile tile--span3 badge-tile r d-3" href="https://www.credly.com/badges/52a14006-7ffb-48a5-809f-7b1874bfa108" target="_blank" rel="noopener" aria-label="AWS Certified Solutions Architect - Associate, verify on Credly">
+          <picture><source type="image/avif" srcset="assets/web/badges/aws-saa.avif"><source type="image/webp" srcset="assets/web/badges/aws-saa.webp"><img loading="lazy" decoding="async" width="267" height="267" src="assets/web/badges/aws-saa.png" alt="AWS Certified Solutions Architect - Associate"></picture>
+        </a>
+        <a class="tile tile--span3 badge-tile r d-4" href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=DB2B9B81F39ADD3B975B1DC33C8CC3F5B9597B75F563EC1816539DB3AD980EB2" target="_blank" rel="noopener" aria-label="Oracle Certified Associate, Java SE 8, verify certificate">
           <picture><source type="image/avif" srcset="assets/web/badges/oca-java.avif"><source type="image/webp" srcset="assets/web/badges/oca-java.webp"><img loading="lazy" decoding="async" width="251" height="267" src="assets/web/badges/oca-java.png" alt="Oracle Certified Associate, Java SE 8 Programmer"></picture>
-        </article>
-        <article class="tile tile--span3 badge-tile r d-4">
-          <picture><source type="image/avif" srcset="assets/web/badges/oci-found.avif"><source type="image/webp" srcset="assets/web/badges/oci-found.webp"><img loading="lazy" decoding="async" width="251" height="267" src="assets/web/badges/oci-found.png" alt="OCI Certified Foundations Associate"></picture>
-        </article>
+        </a>
       </div>
     </div>
   </section>
@@ -1212,7 +1214,7 @@
           </div>
           <ul class="xp__desc">
             <li>Founded and run SUNDEVS, building and selling commercial developer tools.</li>
-            <li><b>500+ copies sold</b> and <b>over LKR 2M in revenue</b> generated.</li>
+            <li><b>1000+ copies sold</b>.</li>
           </ul>
           <div class="xp__tags"><span>Founder</span><span>Java</span><span>Spring Boot</span><span>Vaadin</span><span>Product</span></div>
         </div>
@@ -1490,6 +1492,11 @@
           <h2 class="h-sec" style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:.2em;">Credentials.</h2>
           <p class="tile__label" style="margin:0 0 12px;">Click a certificate to view it</p>
 
+          <div class="certrow">
+            <button class="certthumb" onclick="lbOpen('assets/web/creds/cert-aws-saa.jpg')"><picture><source type="image/avif" srcset="assets/web/creds/cert-aws-saa-t.avif"><source type="image/webp" srcset="assets/web/creds/cert-aws-saa-t.webp"><img width="400" height="309" src="assets/web/creds/cert-aws-saa-t.jpg" alt="AWS Certified Solutions Architect - Associate certificate" loading="lazy"></picture></button>
+            <div class="certinfo"><div class="cert__t">AWS Certified Solutions Architect - Associate</div><span>Amazon Web Services</span>
+              <a href="https://www.credly.com/badges/52a14006-7ffb-48a5-809f-7b1874bfa108" target="_blank" rel="noopener">Verify &rarr;</a></div>
+          </div>
           <div class="certrow">
             <button class="certthumb" onclick="lbOpen('assets/web/creds/cert-oca-java.jpg')"><picture><source type="image/avif" srcset="assets/web/creds/cert-oca-java-t.avif"><source type="image/webp" srcset="assets/web/creds/cert-oca-java-t.webp"><img width="400" height="309" src="assets/web/creds/cert-oca-java-t.jpg" alt="OCA Java SE 8 certificate" loading="lazy"></picture></button>
             <div class="certinfo"><div class="cert__t">Oracle Certified Associate, Java SE 8</div><span>Oracle</span>
