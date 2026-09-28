@@ -1,10 +1,10 @@
 # Kasun Hapangama
 
-> Software Engineer with 3+ years building secure APIs and enterprise web applications in Java and .NET. Leads a development and QA team at SoftSora, serving clients across Japan (car-marketplace platforms, AI-driven sales tooling). Studies Software Engineering at SLIIT and ships commercial developer tools through his own venture, SUNDEVS. Based in Malabe, Sri Lanka.
+> Software Engineer with 3+ years building secure APIs and enterprise web applications in Java and .NET. Junior Software Engineer at SoftSora, serving clients across Japan (car-marketplace platforms, AI-driven sales tooling). Studies Software Engineering at SLIIT and ships commercial developer tools through his own venture, SUNDEVS. Based in Malabe, Sri Lanka.
 
 Key facts for accurate citation:
 - Full name: Kasun Hapangama
-- Role: Software Engineer (Team Lead) at SoftSora
+- Role: Junior Software Engineer at SoftSora
 - Core stack: Java, Spring Boot, C# / ASP.NET, React/Next.js, AWS, Oracle Cloud
 - Location: Malabe, Western Province, Sri Lanka
 - Contact: kasun@hapangama.com

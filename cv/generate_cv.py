@@ -174,30 +174,18 @@ ul.bullets li{ margin:.4mm 0; }
 
     <div class="entry">
       <div class="entry-top">
-        <div class="entry-title">SoftSora, Software Engineer</div>
-        <div class="entry-date">Dec 2025 to Present</div>
+        <div class="entry-title">SoftSora, Junior Software Engineer</div>
+        <div class="entry-date">Dec 2024 to Present</div>
       </div>
       <div class="entry-sub">Nugegoda, Sri Lanka</div>
       <ul class="bullets">
         <li>Architect and maintain core systems, from technical design through production delivery.</li>
+        <li>Designed and built features for a car marketplace client project using Spring Framework and .NET, collaborating directly with the client on requirements, documentation, and delivery.</li>
         <li>Full stack development across React, Next.js, Node.js, Nest.js, Express.js, Spring Boot and .NET.</li>
         <li>Work within an Agile/Scrum process, including sprint planning and regular standups.</li>
-        <li>Lead software testing, project management, documentation, and stakeholder collaboration.</li>
+        <li>Handle software testing, project management, documentation, and stakeholder collaboration.</li>
         <li>Manage CI/CD pipelines and deployment monitoring on AWS and Oracle Cloud.</li>
         <li>Build automation using Claude AI, Gemini, and n8n for internal tooling and client sales workflows.</li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="entry-top">
-        <div class="entry-title">SoftSora, Junior Software Engineer</div>
-        <div class="entry-date">Dec 2024 to Dec 2025</div>
-      </div>
-      <div class="entry-sub">Colombo, Sri Lanka</div>
-      <ul class="bullets">
-        <li>Designed and built features for a car marketplace client project using Spring Framework and .NET.</li>
-        <li>Collaborated directly with the client on requirements gathering, documentation, and delivery.</li>
-        <li>Managed software project timelines and customer collaboration.</li>
       </ul>
     </div>
 
